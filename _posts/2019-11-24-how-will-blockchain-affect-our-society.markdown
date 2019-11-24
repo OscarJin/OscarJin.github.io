@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How will Blockchain Affects Our Society"
+title:  "How will Blockchain Affect Our Society"
 date:   2019-11-24 21:52:25 +0800
 categories: Blockchain
 ---
