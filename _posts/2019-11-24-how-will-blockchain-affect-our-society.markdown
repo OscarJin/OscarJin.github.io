@@ -1,12 +1,10 @@
 ---
 layout: post
-title:  "How will Blockchain Affects Our Society"
+title:  "How will Blockchain Affect Our Society"
 date:   2019-11-24 21:52:25 +0800
 categories: Blockchain
 ---
-This article will exchange some of my personal views on the blockchain. Of course, if you have a basic understanding of it, you may understand it better.
-
-Check out the blockchain on [Wikipedia][blockchain-wiki] for more technical info.
+This article will express some of my views on how the blockchain will affect out society. Of course, if you have a basic understanding of the blockchain itself, you may understand it better.
 
 I came up with the following ideas when I was carrying out the project, Blockchain-Based E-Document Trading System (view the repository on [GitHub][github]). After having discussed them with my tutor, I finished the following article.
 
@@ -23,6 +21,8 @@ Technically, decentralization is not actually reliable. What is most criticized 
 Therefore, the blockchain is worth exploring not only in the aspect of technology itself, but also in the aspect of social factors including morality and laws.
 
 Perhaps the opinions are quite subjective and slightly negative, any comments are welcomed!
+
+You may check out the blockchain on [Wikipedia][blockchain-wiki] for more technical info.
 
 Oscar Jin
 
