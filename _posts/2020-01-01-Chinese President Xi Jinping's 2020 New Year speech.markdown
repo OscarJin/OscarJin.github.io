@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Chinese President Xi Jinping's 2020 New Year Speech (Bilingual)"
-date:   2020-01-01 00:08:00 +0800
+date:   2020-01-01 08:00:00 +0800
 categories: Essay
 ---
 Chinese President Xi Jinping has delivered a New Year speech in which he reviewed the achievements of 2019 and extended his New Year wishes for 2020.
 
 &nbsp;
 
-![Xi's Speech](image/200101/pic1.png)
+![Xi's Speech](OscarJin.github.io/image/200101/pic1.png)
 
 &nbsp;
 
