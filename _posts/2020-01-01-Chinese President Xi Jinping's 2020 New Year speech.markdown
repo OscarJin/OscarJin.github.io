@@ -8,7 +8,7 @@ Chinese President Xi Jinping has delivered a New Year speech in which he reviewe
 
 &nbsp;
 
-![Xi's Speech](OscarJin.github.io/image/200101/pic1.png)
+![Xi's Speech]({{ site.url }}/assets/200101/pic1.png)
 
 &nbsp;
 
