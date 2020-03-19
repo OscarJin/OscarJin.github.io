@@ -15,7 +15,7 @@ Chinese President Xi Jinping has delivered a New Year speech in which he reviewe
 The bilingual full text is shown as follows.
 &nbsp;
 
->2020年就要到了，我在首都北京向大家送上新年的美好祝福！<br>  
+>2020年就要到了，我在首都北京向大家送上新年的美好祝福！<br>
 The year 2020 is arriving. From China's capital Beijing, I would like to extend my New Year wishes to you all!<br> 
 &nbsp;
 
