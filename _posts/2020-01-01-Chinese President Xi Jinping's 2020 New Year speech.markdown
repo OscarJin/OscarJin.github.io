@@ -15,26 +15,15 @@ Chinese President Xi Jinping has delivered a New Year speech in which he reviewe
 The bilingual full text is shown as follows.
 &nbsp;
 
-2020年就要到了，我在首都北京向大家送上新年的美好祝福！
-
-The year 2020 is arriving. From China's capital Beijing, I would like to extend my New Year wishes to you all!
-
-&nbsp;
-
+>2020年就要到了，我在首都北京向大家送上新年的美好祝福！ 
+The year 2020 is arriving. From China's capital Beijing, I would like to extend my New Year wishes to you all!<br> 
 2019年，我们用汗水浇灌收获，以实干笃定前行。高质量发展平稳推进，我国国内生产总值预计将接近100万亿元人民币、人均将迈上1万美元的台阶。三大攻坚战取得关键进展。京津冀协同发展、长江经济带发展、粤港澳大湾区建设、长三角一体化发展按下快进键，黄河流域生态保护和高质量发展成为国家战略。全国将有340个左右贫困县摘帽、1000多万人实现脱贫。嫦娥四号在人类历史上第一次登陆月球背面，长征五号遥三运载火箭成功发射，雪龙2号首航南极，北斗导航全球组网进入冲刺期，5G商用加速推出，北京大兴国际机场“凤凰展翅”……这些成就凝结着新时代奋斗者的心血和汗水，彰显了不同凡响的中国风采、中国力量。
+In 2019, we sweated and we toiled as we pressed ahead with concrete efforts for achievements. Thanks to our steady pursuit of high-quality development, China's GDP is expected to edge close to 100 trillion yuan with the per capita figure reaching the level of 10,000 US dollars. Significant breakthroughs have been achieved in three tough battles. Coordinated development in the Beijing-Tianjin-Hebei Region, the Yangtze River Economic Belt, the Guangdong-Hong Kong-Macao Greater Bay Area, and the Yangtze River Delta, all accelerated. Ecological protection and high-quality development in the Yellow River basin have become national strategies. About 340 impoverished counties and more than 10 million people have been lifted out of poverty. Our lunar probe Chang'e-4, for the first time in human history, landed on the far side of the moon; the Long March-5 Y3 rocket was successfully launched; the Xuelong 2 icebreaker set sail on its maiden voyage to the Antarctic; the construction of the global network of the BeiDou Navigation Satellite System is sprinting towards the finish line; the commercial application of 5G technology is accelerating; the Beijing Daxing International Airport spread its wings like a phoenix… all these achievements are the result of the efforts and sweat of those who strive in the new era, and they demonstrate extraordinary Chinese splendor and Chinese strength.<br> 
 
-In 2019, we sweated and we toiled as we pressed ahead with concrete efforts for achievements. Thanks to our steady pursuit of high-quality development, China's GDP is expected to edge close to 100 trillion yuan with the per capita figure reaching the level of 10,000 US dollars. Significant breakthroughs have been achieved in three tough battles. Coordinated development in the Beijing-Tianjin-Hebei Region, the Yangtze River Economic Belt, the Guangdong-Hong Kong-Macao Greater Bay Area, and the Yangtze River Delta, all accelerated. Ecological protection and high-quality development in the Yellow River basin have become national strategies. About 340 impoverished counties and more than 10 million people have been lifted out of poverty. Our lunar probe Chang'e-4, for the first time in human history, landed on the far side of the moon; the Long March-5 Y3 rocket was successfully launched; the Xuelong 2 icebreaker set sail on its maiden voyage to the Antarctic; the construction of the global network of the BeiDou Navigation Satellite System is sprinting towards the finish line; the commercial application of 5G technology is accelerating; the Beijing Daxing International Airport spread its wings like a phoenix… all these achievements are the result of the efforts and sweat of those who strive in the new era, and they demonstrate extraordinary Chinese splendor and Chinese strength.
-
-&nbsp;
-
-一年来，改革开放不断催生发展活力。党和国家机构改革圆满完成。增设一批自由贸易试验区和上海自由贸易试验区新片区。科创板顺利启动推进。减税降费总额超过2万亿元。个人所得税起征点提高了，老百姓常用的许多药品降价了，网络提速降费使刷屏更快了，垃圾分类引领着低碳生活新时尚。“基层减负年”让基层干部轻装上阵。放眼神州大地，处处都有新变化新气象。
-
+>一年来，改革开放不断催生发展活力。党和国家机构改革圆满完成。增设一批自由贸易试验区和上海自由贸易试验区新片区。科创板顺利启动推进。减税降费总额超过2万亿元。个人所得税起征点提高了，老百姓常用的许多药品降价了，网络提速降费使刷屏更快了，垃圾分类引领着低碳生活新时尚。“基层减负年”让基层干部轻装上阵。放眼神州大地，处处都有新变化新气象。
 Over the past year, reform and opening-up has continuously generated vigor for development. The reform of Party and government institutions has been successfully completed. We have set up another batch of pilot free trade zones, and expanded the Shanghai Pilot Free Trade Zone. The Science and Technology Innovation Board was launched smoothly. We have cut taxes and fees by more than 2 trillion yuan, and raised the individual income tax threshold. Many types of commonly-used medicines have seen their prices drop, while cheaper and faster internet connection has enabled faster flow of information. Garbage sorting is leading the new trend of a low-carbon lifestyle. This year we have also streamlined the work of officials at the grassroots level. New changes are taking place everywhere and the country is taking on a fresh look.
-
 &nbsp;
-
 一年来，国防和军队改革扎实推进，人民军队展现出新时代强军风貌。我们进行国庆大阅兵，举行海军、空军成立70周年庆祝活动，举办第七届世界军人运动会。首艘国产航母正式列装。人民子弟兵永远是保卫祖国的钢铁长城，让我们向守护家园的忠诚卫士们致敬！
-
 Over the past year, we have steadily pushed forward reforms in our national defense and military systems. The armed forces have taken on a new look of a strong army in the new era. We held a grand military parade on National Day, celebrated the 70th anniversary of the establishment of the Navy and the Air Force, and also hosted the 7th Military World Games. The country's first self-developed aircraft carrier was commissioned. The people's army will always serve as a great wall of steel that guards our motherland. Let's salute those loyal soldiers who safeguard our home.
 
 &nbsp;
