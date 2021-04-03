@@ -21,7 +21,7 @@ plainwhite:
 
   # generate social links in footer
   social_links:
-    twitter: OscarJin_THU
+    twitter: "OscarJin_THU"
     github:  OscarJin
     # linkedIn: in/thelehhman
     rss: rss
