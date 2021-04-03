@@ -9,7 +9,9 @@ categories: Photography
 
 于是这个寒假，我走了很多地方，多是一时兴起。听说上海著名的美食街云南南路被划入了旧改范围，便过去看看，结果走着走着就走到了静安别墅，那也算是整个寒假街拍的开始。
 
-![yunnan road](/assets/210301/yunnan.jpg =500x)
+<img src="/assets/210301/yunnan.jpg" width="500">
+
 <center>云南南路街景</center>
 
 之后，过年回到了宁波，又相继去了老外滩，鼓楼，前童古镇等等，这一段日子出了很多有意思的片。
+
