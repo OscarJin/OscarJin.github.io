@@ -1,4 +1,4 @@
-title: Oscar Jin's Blog
+title: OSCAR LAB
 author: Oscar Jin
 email: oscarjin0908@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
@@ -13,7 +13,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: Oscar Jin
-  tagline: Student
+  tagline: THU Photography Team
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
   analytics_id: 'UA-155135706-1'
