@@ -16,7 +16,7 @@ categories: Photography
 <center><img src="/assets/210403/1.jpg" width="500"></center>
 <center>校园山桃外拍</center>
 <center>Model: 晓君</center>
-nbsp;
+
 <center><img src="/assets/210403/2.jpg" width="500"></center>
 <center><img src="/assets/210403/3.jpg" width="800"></center>
 <center><img src="/assets/210403/4.jpg" width="500"></center>
