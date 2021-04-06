@@ -50,3 +50,5 @@ categories: Photography
 
 <center><img src="/assets/210301/family.jpg" width="800"></center>
 <center>THU Photography Team</center>
+
+&copy; Oscar Jin, 2021
