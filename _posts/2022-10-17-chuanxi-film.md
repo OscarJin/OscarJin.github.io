@@ -5,11 +5,11 @@ categories: [Gallery, Sichuan]
 tags: [photography, film]
 math: true
 ---
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
 Camera: Pentax Espio 120mi
 
 Film: Kodak Gold 200
-
-<meta name="viewport" content="width=device-width,initial-scale=1" />
 
 <center><iframe src="//player.bilibili.com/player.html?bvid=BV1JP411N7He&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="90%" height=width*0.6> </iframe></center>
 
