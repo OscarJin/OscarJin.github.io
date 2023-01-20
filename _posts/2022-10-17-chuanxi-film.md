@@ -7,12 +7,29 @@ math: true
 ---
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
+<style>
+.aspect-ratio {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56%;
+}
+.aspect-ratio iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+</style>
+
 Camera: Pentax Espio 120mi
 
 Film: Kodak Gold 200
 
-{% include embed/bilibili.html id='BV1JP411N7He' %}
-
+<div class="aspect-ratio">
+  <center><iframe src="//player.bilibili.com/player.html?bvid=BV1JP411N7He&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></center>
+</div>
 
 Actually, such dumb cameras are not ideal equipment for landscape. The auto focus does not work well for landscape since the scenery is faraway, and the auto exposure cannot deal with the complex light including dusk and dawn.
 
