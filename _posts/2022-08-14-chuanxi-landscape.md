@@ -43,6 +43,6 @@ pin: true
 
 <center><img src="/assets/220814/yala-5.jpg" width="80%"></center>
 
-## Starry Night - 星空璀璨
+## Starry Night - 星光璀璨
 
 <center><img src="/assets/220814/star-1.jpg" width="80%"></center>
