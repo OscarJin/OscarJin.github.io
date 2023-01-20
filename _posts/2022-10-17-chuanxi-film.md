@@ -31,6 +31,7 @@ Film: Kodak Gold 200
   <center><iframe src="//player.bilibili.com/player.html?bvid=BV1JP411N7He&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></center>
 </div>
 
+
 Actually, such dumb cameras are not ideal equipment for landscape. The auto focus does not work well for landscape since the scenery is faraway, and the auto exposure cannot deal with the complex light including dusk and dawn.
 
 ## Sunset on the Plateau
