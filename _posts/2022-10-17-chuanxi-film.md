@@ -2,7 +2,7 @@
 title:  Film Memories of West Sichuan
 date:   2022-10-17 00:23:00 +0800
 categories: [Gallery, Sichuan]
-tags: [photography, film]
+tags: [photography, film, village, mountains]
 math: true
 ---
 <meta name="viewport" content="width=device-width,initial-scale=1" />

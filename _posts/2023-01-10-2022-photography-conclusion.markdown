@@ -2,7 +2,7 @@
 title:  "2022摄影年终总结"
 date:   2023-1-10 21:03:36 +0800
 categories: [Gallery]
-tags: [photography]
+tags: [photography, landscape]
 pin: true
 ---
 <meta name="viewport" content="width=device-width,initial-scale=1" />
