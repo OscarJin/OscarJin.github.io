@@ -43,6 +43,6 @@ pin: true
 
 ![](/assets/220814/yala-5.jpg)
 
-## Starry Night - 星空璀璨
+## Starry Night - 星光璀璨
 
 ![](/assets/220814/star-1.jpg)

@@ -35,40 +35,40 @@ Film: Kodak Gold 200
 
 ## Nature in Autumn
 
-<center><img src="/assets/221112/4.jpg" width="80%"></center>
+![](/assets/221112/4.jpg)
 
-<center><img src="/assets/221112/6.jpg" width="80%"></center>
+![](/assets/221112/6.jpg)
 
-<center><img src="/assets/221112/7.jpg" width="80%"></center>
+![](/assets/221112/7.jpg)
 
-<center><img src="/assets/221112/9.jpg" width="80%"></center>
+![](/assets/221112/9.jpg)
 
 ## Architecture in Autumn
 
-<center><img src="/assets/221112/1.jpg" width="80%"></center>
+![](/assets/221112/1.jpg)
 
-<center><img src="/assets/221112/2.jpg" width="80%"></center>
+![](/assets/221112/2.jpg)
 
-<center><img src="/assets/221112/3.jpg" width="80%"></center>
+![](/assets/221112/3.jpg)
 
-<center><img src="/assets/221112/5.jpg" width="80%"></center>
+![](/assets/221112/5.jpg)
 
-<center><img src="/assets/221112/10.jpg" width="80%"></center>
+![](/assets/221112/10.jpg)
 
-<center><img src="/assets/221112/11.jpg" width="80%"></center>
+![](/assets/221112/11.jpg)
 
-<center><img src="/assets/221112/18.jpg" width="80%"></center>
+![](/assets/221112/18.jpg)
 
 ## People in Autumn
 
-<center><img src="/assets/221112/12.jpg" width="80%"></center>
+![](/assets/221112/12.jpg)
 
-<center><img src="/assets/221112/13.jpg" width="80%"></center>
+![](/assets/221112/13.jpg)
 
-<center><img src="/assets/221112/14.jpg" width="80%"></center>
+![](/assets/221112/14.jpg)
 
-<center><img src="/assets/221112/15.jpg" width="80%"></center>
+![](/assets/221112/15.jpg)
 
-<center><img src="/assets/221112/16.jpg" width="80%"></center>
+![](/assets/221112/16.jpg)
 
-<center><img src="/assets/221112/17.jpg" width="80%"></center>
+![](/assets/221112/17.jpg)

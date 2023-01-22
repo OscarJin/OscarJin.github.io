@@ -13,21 +13,21 @@ pin: true
 
 一月初考完期末的时候，去了一趟京郊的落坡岭水库。这里停车不收费，景区不收门票（其实压根儿就不算个正经景区），也没什么人，倒是个散心休闲的好地方。永定河在这里形成一个大湾，水很清也很蓝，此时正值凛冬，湖面已经冻上厚厚的冰，在山谷里个给人冷冽空旷之感。作为一个南方人，第一次走上结冰的河面，还是有点小激动的。
 
-<center><img src="/assets/230110/bubbles.jpg" width="80%"></center>
+![](/assets/230110/bubbles.jpg)
 
 那儿还有段京门铁路，当年詹天佑设计的，现在已经废弃了，拍拍照也挺有感觉的。
 
-<center><img src="/assets/230110/railway.jpg" width="80%"></center>
+![](/assets/230110/railway.jpg)
 
 ## 冬奥盛会
 
 从落坡岭散心回来不久，就开始志愿者集训，接着就准备进冬奥闭环了。从冬雪纷飞到春花烂漫，整整两个月就在里面当志愿者了。冬奥注定是我2022最难忘的回忆，但因为工作原因，也没认真拍太多照片，这里就不妨分享两张。
 
-<center><img src="/assets/230110/skate.jpg" width="80%"></center>
+![](/assets/230110/skate.jpg)
 
 第一张是国家速滑馆（冰丝带）的内景。严格来说，这张是2021年底当时去场馆踏勘的时候拍的，但由于保密原因，它就一直躺在卡里，直到冬奥结束我才导出来。当时场馆才刚刚建好，里面还没开始冬奥相关的布置，可谓是一干二净全新的。真的很喜欢这种白色的钢架建筑结构，透露着一种简约的高级感。
 
-<center><img src="/assets/230110/gold-medal.jpg" width="80%"></center>
+![](/assets/230110/gold-medal.jpg)
 
 第二张是出外勤时在首体拍的，是隋文静和韩聪夺金的那场花滑，有幸能在现场见证中国队夺得的第九枚金牌！
 
@@ -35,19 +35,19 @@ pin: true
 
 从冬奥闭环出来，已是春天。尽管此时的北京非常神奇的下了一场鹅毛大雪，但依然抵挡不住春天的步伐。于是和几位好友一起去爬了野长城赏花。此时仍值早春，长城上的桃花还没完全盛开，但也足够惊艳。
 
-<center><img src="/assets/230110/spring.jpg" width="80%"></center>
+![](/assets/230110/spring.jpg)
 
 ## 仰望星空
 
 当然，出了闭环星空还是惦记着的，太久没拍了手也有点痒，一连拍了学校里两个星轨的机位。
 
-<center><img src="/assets/230110/trails1.jpg" width="80%"></center>
+![](/assets/230110/trails1.jpg)
 
-<center><img src="/assets/230110/trails2.jpg" width="80%"></center>
+![](/assets/230110/trails2.jpg)
 
 趁着清明假期，终于走出光污染严重的市区，去往传说中被誉为“星空圣地”的不老屯进行一场巡礼。尽管下半夜看到夏季银河升起的时候有些许激动，但不得不说，这暗夜条件和西部那是差远了，不过对于出不了京的大学生，足矣足矣。
 
-<center><img src="/assets/230110/bulaotun.jpg" width="80%"></center>
+![](/assets/230110/bulaotun.jpg)
 
 ## 封校岁月
 
@@ -55,13 +55,13 @@ pin: true
 
 比如“清华墙”——
 
-<center><img src="/assets/230110/wall.jpg" width="80%"></center>
+![](/assets/230110/wall.jpg)
 
 尽管迷惑事情不少，但也不乏一些美好的事物。
 
 比如一次晚霞——
 
-<center><img src="/assets/230110/dusk.jpg" width="80%"></center>
+![](/assets/230110/dusk.jpg)
 
 ## 川西之旅
 
@@ -71,35 +71,35 @@ pin: true
 
 幸运的是，三座雪山都看到了。虽然夏天雨季去川西并非明智之举，费老大力气到冷嘎措也没见着贡嘎雪山，不过倒是在子梅垭口看到它露了个顶。
 
-<center><img src="/assets/230110/gongga.jpg" width="80%"></center>
+![](/assets/230110/gongga.jpg)
 
 雅拉雪山是三座雪山中最容易见着的，各个角度都值得一看，不过我还是最喜欢云绕雅拉这个角度。站在垭口上，雅拉雪山近在咫尺，仅仅隔了一个深不见底的峡谷，这种近距离的强烈压迫感令人震撼。
 
-<center><img src="/assets/230110/galaxy.jpg" width="80%"></center>
+![](/assets/230110/galaxy.jpg)
 
 在从垭口摸黑下撤的时候路过一个海子，此时银河早已升起，便拍下了高原上的银河，不得不说这比四月那次不老屯的好太多了。
 
 在川西的最后一天清晨，看到了四姑娘山的朝霞，算是这片地方送别我们的礼物。说起来还有个小插曲：我们三个人担心到观景平台时人满为患没地方架相机（毕竟这机位太大众了），便早早出发了，结果到的时候发现观景台空无一人，其他人都是姗姗来迟卡着点来的……（论卷还得是华子的学生hhh）
 
-<center><img src="/assets/230110/Siguniang.jpg" width="80%"></center>
+![](/assets/230110/Siguniang.jpg)
 
 ## 金秋十月
 
 秋天的北京我还是很喜欢的。来到清华第三年，终于用胶片认真的记录了一次校园里的秋景——
 
-<center><img src="/assets/230110/autumn.jpg" width="80%"></center>
+![](/assets/230110/autumn.jpg)
 
 更多秋天的照片在之前的[Autumn in Tsinghua][autumn]中可以看到。
 
 每年春秋分时节附近，京城便会有“悬日”的奇观。得益于一个不错的天气条件，也总算是弥补了21年的缺憾，拍摄了一次中国尊悬日。
 
-<center><img src="/assets/230110/sunrise.jpg" width="80%"></center>
+![](/assets/230110/sunrise.jpg)
 
 ## 月食盛宴
 
 今年的摄影以一场月全食作结。经过一番规划，最终决定用“月轨”的形式来呈现这次月全食，在清华里面记录了从全食到复圆的轨迹。
 
-<center><img src="/assets/230110/eclipse.jpg" width="80%"></center>
+![](/assets/230110/eclipse.jpg)
 
 ## 写在最后
 

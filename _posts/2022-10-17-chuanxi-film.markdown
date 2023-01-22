@@ -36,38 +36,38 @@ Actually, such dumb cameras are not ideal equipment for landscape. The auto focu
 
 ## Sunset on the Plateau
 
-<center><img src="/assets/221017/1.jpg" width="80%"></center>
+![](/assets/221017/1.jpg)
 
-<center><img src="/assets/221017/2.jpg" width="80%"></center>
+![](/assets/221017/2.jpg)
 
-<center><img src="/assets/221017/3.jpg" width="80%"></center>
+![](/assets/221017/3.jpg)
 
 ## Peaceful Village
 
-<center><img src="/assets/221017/4.jpg" width="80%"></center>
+![](/assets/221017/4.jpg)
 
-<center><img src="/assets/221017/5.jpg" width="80%"></center>
+![](/assets/221017/5.jpg)
 
-<center><img src="/assets/221017/6.jpg" width="80%"></center>
+![](/assets/221017/6.jpg)
 
 ## Odd Rocks
 
-<center><img src="/assets/221017/7.jpg" width="80%"></center>
+![](/assets/221017/7.jpg)
 
-<center><img src="/assets/221017/8.jpg" width="80%"></center>
+![](/assets/221017/8.jpg)
 
-<center><img src="/assets/221017/9.jpg" width="80%"></center>
+![](/assets/221017/9.jpg)
 
 ## Meadows and Peaks
 
-<center><img src="/assets/221017/10.jpg" width="80%"></center>
+![](/assets/221017/10.jpg)
 
-<center><img src="/assets/221017/11.jpg" width="80%"></center>
+![](/assets/221017/11.jpg)
 
-<center><img src="/assets/221017/12.jpg" width="80%"></center>
+![](/assets/221017/12.jpg)
 
 ## Snow-capped Mountains Dyed Gold
 
-<center><img src="/assets/221017/13.jpg" width="80%"></center>
+![](/assets/221017/13.jpg)
 
-<center><img src="/assets/221017/14.jpg" width="80%"></center>
+![](/assets/221017/14.jpg)
