@@ -1,5 +1,5 @@
 ---
-title: Notes: Learning Reinforcement Learning (1)
+title: Notes on Reinforcement Learning (1)
 date:   2023-01-22 10:47:00 +0800
 categories: [Research, Notes, RL]
 tags: [notes, rl]
