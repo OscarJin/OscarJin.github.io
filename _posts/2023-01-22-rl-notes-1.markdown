@@ -1,0 +1,70 @@
+---
+title: Notes: Learning Reinforcement Learning (1)
+date:   2023-01-22 10:47:00 +0800
+categories: [Research, Notes, RL]
+tags: [notes, rl]
+math: true
+---
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<style>
+.aspect-ratio {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56%;
+}
+.aspect-ratio iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+</style>
+
+# Introduction
+
+Reinforcement learning is focused on **goal-directed** learning from interaction.
+
+## Reinforcement Learning
+
+- Definition: Reinforcement learning is learning how to **map situations to actions** so as to **maximize** a numerical reward signal.
+- Two most important distinguished features: **trail-and-error search** and **delayed reward**
+- Formalization: Markov decision processes
+  - Basic idea: capture the most important aspects of the real problem facing a **learning agent** interacting over time with its **environment** to achieve a **goal**
+  - Three aspects: sensation, action and goal
+- RL considers the *whole* problem of a **goal-directed agent** interacting with an **uncertain environment**
+  - Start with a *complete, interactive, goal-seeking* agent: all agents have **explicit goals**, can **sense** aspects of their environments, and can choose **actions** to influence their environments
+
+## Elements of RL
+
+### Policy
+
+A policy is a *mapping* from **perceived states** of the environment to **actions** to be taken when in those states.
+
+### Reward Signal
+
+- Defines the goal of a RL problem
+- Reward: on each time step, the environment sends to the RL agent a single number
+- Primary basis for altering the policy
+
+### Value Function
+
+- Total amount of reward an agent can expect to accumulate over the future, starting from that state
+
+> **Values vs Rewards**
+> - Rewards determine the *immediate, intrinsic* desirability of environmental states
+> - Values indicate the *long-term* desirability of states after taking into account the states that are likely to follow and the rewards available in those states (values are prediction of rewards)
+{: .prompt-info}
+
+- Action choices are made based on value judgments
+> We seek actions that bring about states of highest value, not highest reward
+{: .prompt-tip }
+
+- Value estimation: the most important component of almost all RL algorithms is a method for efficiently estimating values
+
+### Model
+
+- Model mimics the behavior of the environment
+- Models are used for *planning* (any way of deciding on a course of action by considering possible future situations before they are actually experienced)
