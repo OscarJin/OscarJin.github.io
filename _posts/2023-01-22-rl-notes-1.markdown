@@ -59,6 +59,7 @@ A policy is a *mapping* from **perceived states** of the environment to **action
 {: .prompt-info}
 
 - Action choices are made based on value judgments
+
 > We seek actions that bring about states of highest value, not highest reward
 {: .prompt-tip }
 
