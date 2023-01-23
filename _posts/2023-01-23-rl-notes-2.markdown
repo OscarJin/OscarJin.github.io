@@ -1,0 +1,46 @@
+---
+title: Notes on Reinforcement Learning (2)
+date:   2023-01-23 09:49:00 +0800
+categories: [Research, Notes, RL]
+tags: [notes, rl]
+math: true
+---
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<style>
+.aspect-ratio {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56%;
+}
+.aspect-ratio iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+</style>
+# Tabular Solution Methods
+
+Now we consider the simplest forms: the state and action spaces are small enough for the approximate value functions to be represented as arrays, or *tables*. 
+
+# Multi-armed Bandits
+
+Special case: only a single state, simplified setting that does not involve learning to act in more than one situation (*nonassociative* setting)
+
+## A k-armed Bandit Problem
+
+Each of the k actions has an expected or mean reward given that that action is selected (*value* of that action)
+
+$A_t$ - action selected on time step $t$
+
+$R_t$ - corresponding reward
+
+$q_*(a)$ - value of an arbitrary action $a$
+
+$q_*(a) = \mathbb{E}[R_t|A_t=a]$
+
+
+
