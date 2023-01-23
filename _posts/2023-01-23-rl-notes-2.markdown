@@ -55,6 +55,12 @@ $Q_t(a)$ - estimated value of $a$ at $t$
 
 Methods for estimating the values of actions and for using the estimated to make action selection decisions.
 
-One natural way to estimate: average the rewards actually received
+One natural way to estimate: average the rewards actually received (**Sample-average** method)
 
-$Q_t(a) \dot{=} \frac{\mathrm{sum~of~rewards~when}~a~\mathrm{taken~prior~to~}t}{\mathrm{number~of~times~}a~\mathrm{taken~prior~to~}t} = \frac{\sum_{i=1}^{t-1}R_i\cdot\mathbb{1}_{A_i=a}}{\sum_{i=1}^{t-1}\mathbb{1}_{A_i=a}}$
+$Q_t(a) \dot{=} \frac{\mathrm{sum~of~rewards~when}~a~\mathrm{taken~prior~to~}t}{\mathrm{number~of~times~}a~\mathrm{taken~prior~to~}t} = \frac{\sum_{i=1}^{t-1} R_i \cdot \mathbb{1}_{A_i=a}}{\sum_{i=1}^{t-1} \mathbb{1}_{A_i=a}}$
+
+Simplest action selection rule: select one of the actions with the highest estimated value (one of the greedy actions)
+
+$A_t \dot{=} \mathrm{argmax}_a Q_t(a)$
+
+A simple alternative: with small probability $\varepsilon$, select randomly from among all the actions with equal probability, independently of the action-value estimates (**$\varepsilon$-greedy** methods)
