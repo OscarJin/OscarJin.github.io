@@ -57,7 +57,7 @@ Methods for estimating the values of actions and for using the estimated to make
 
 One natural way to estimate: average the rewards actually received (**Sample-average** method)
 
-$Q_t(a) \dot{=} \frac{\mathrm{sum~of~rewards~when}~a~\mathrm{taken~prior~to~}t}{\mathrm{number~of~times~}a~\mathrm{taken~prior~to~}t} = \frac{\sum_{i=1}^{t-1} R_i \cdot} {\sum_{i=1}^{t-1} \mathbb{1}_{A_i=a}}$
+$Q_t(a) \dot{=} \frac{\mathrm{sum~of~rewards~when}~a~\mathrm{taken~prior~to~}t}{\mathrm{number~of~times~}a~\mathrm{taken~prior~to~}t} = \frac{\sum_{i=1}^{t-1} R_i \cdot \mathbb{1}_{A_i=a} } {\sum_{i=1}^{t-1} \mathbb{1}_{A_i=a}}$
 
 Simplest action selection rule: select one of the actions with the highest estimated value (one of the greedy actions)
 
