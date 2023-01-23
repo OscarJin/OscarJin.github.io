@@ -34,6 +34,10 @@ Reinforcement learning is focused on **goal-directed** learning from interaction
 - Formalization: Markov decision processes
   - Basic idea: capture the most important aspects of the real problem facing a **learning agent** interacting over time with its **environment** to achieve a **goal**
   - Three aspects: sensation, action and goal
+
+> RL is distinguished from other computational approaches by its emphasis on learning by an agent from direct interaction with its environment, without requiring exemplary supervision or complete models of the environment.
+{: .prompt-info}
+
 - RL considers the *whole* problem of a **goal-directed agent** interacting with an **uncertain environment**
   - Start with a *complete, interactive, goal-seeking* agent: all agents have **explicit goals**, can **sense** aspects of their environments, and can choose **actions** to influence their environments
 
