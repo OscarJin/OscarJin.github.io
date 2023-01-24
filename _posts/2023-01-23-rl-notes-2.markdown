@@ -104,6 +104,8 @@ $$
 
 Pseudocode for a complete bandit algorithm using incrementally computed sample averages and $\varepsilon$-greedy action selection:
 
-![](/assets/230123/simple-bandit-algorithm,jpg)
+![](/assets/230123/simple-bandit-algorithm.jpg)
 _A simple bandit algorithm_
+
+## Tracking a Nonstationary Problem
 
