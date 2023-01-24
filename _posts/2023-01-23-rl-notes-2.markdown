@@ -66,3 +66,44 @@ Simplest action selection rule: select one of the actions with the highest estim
 $$A_t \dot{=} \mathrm{argmax}_a Q_t(a)$$
 
 A simple alternative: with small probability $\varepsilon$, select randomly from among all the actions with equal probability, independently of the action-value estimates (**$\varepsilon$-greedy** methods)
+
+## Incremental Implementation
+
+Compute sample averages in a computationally efficient manner, with constant memory and constant per-time-step computation
+
+$R_i$ - reward received after the $i$th selection of this action
+
+$Q_n$ - estimate of this action's value after it has been selected $n-1$ times
+
+$$
+Q_n \dot{=} \frac{R_1+R_2+\cdots+R_{n-1}}{n-1}
+$$
+However, each additional reward would require additional memory and computation
+
+Devise incremental formulas:
+$$
+\begin{align}
+Q_{n+1} &= \frac{1}{n}\sum_{i=1}^n {R_i}\\
+&= \frac{1}{n}\Big(R_n + \sum_{i=1}^{n-1} {R_i}\Big)\\
+&= \frac{1}{n}\Big(R_n + (n-1)Q_n\Big)\\
+&= Q_n + \frac{1}{n}[R_n-Q_n]\\
+\end{align}
+$$
+
+> The formulas hold even for $n=1$, obtaining $Q_2=R_1$ for arbitrary $Q_1$
+{: .prompt-tip }
+
+General form:
+$$
+NewEstimate \leftarrow OldEstimate + StepSize[Target-OldEstimate]
+$$
+
+- $[Target-OldEstimate]$ - **error** is the estimate
+
+- Denote step-size parameter by $\alpha$ or $\alpha_t(a)$
+
+Pseudocode for a complete bandit algorithm using incrementally computed sample averages and $\varepsilon$-greedy action selection:
+
+![](/assets/230123/simple-bandit-algorithm,jpg)
+_A simple bandit algorithm_
+
