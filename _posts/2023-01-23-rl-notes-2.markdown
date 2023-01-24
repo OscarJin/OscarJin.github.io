@@ -63,7 +63,9 @@ $$
 
 Simplest action selection rule: select one of the actions with the highest estimated value (one of the greedy actions)
 
-$$A_t \dot{=} \mathrm{argmax}_a Q_t(a)$$
+$$
+A_t \dot{=} \mathrm{argmax}_a Q_t(a)
+$$
 
 A simple alternative: with small probability $\varepsilon$, select randomly from among all the actions with equal probability, independently of the action-value estimates (**$\varepsilon$-greedy** methods)
 
@@ -78,9 +80,11 @@ $Q_n$ - estimate of this action's value after it has been selected $n-1$ times
 $$
 Q_n \dot{=} \frac{R_1+R_2+\cdots+R_{n-1}}{n-1}
 $$
+
 However, each additional reward would require additional memory and computation
 
 Devise incremental formulas:
+
 $$
 \begin{align}
 Q_{n+1} &= \frac{1}{n}\sum_{i=1}^n {R_i}\\
@@ -94,11 +98,12 @@ $$
 {: .prompt-tip }
 
 General form:
+
 $$
 NewEstimate \leftarrow OldEstimate + StepSize[Target-OldEstimate]
 $$
 
-- $[Target-OldEstimate]$ - **error** is the estimate
+- $[Target-OldEstimate]$ is an **error** in the estimate
 
 - Denote step-size parameter by $\alpha$ or $\alpha_t(a)$
 
@@ -107,5 +112,19 @@ Pseudocode for a complete bandit algorithm using incrementally computed sample a
 ![](/assets/230123/simple-bandit-algorithm.jpg)
 _A simple bandit algorithm_
 
+> The averaging methods above are appropriate for stationary bandit problems (the reward probabilities do not change over time)
+{: .prompt-tip }
+
 ## Tracking a Nonstationary Problem
 
+For nonstationary problems, give more weight to recent rewards than to long-past rewards. One of the most popular ways is to use a constant step-size parameter.
+
+Modify the incremental update rule for $Q_n$:
+
+$$
+Q_{n+1} \dot{=} Q_n + \alpha [R_n-Q_n]
+$$
+
+where $\alpha\in (0,1]$ is constant.
+
+.
