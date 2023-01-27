@@ -65,3 +65,49 @@ $$
 > Consider using reinforcement learning to control the motion of a robot arm in a repetitive pick-and-place task. If we want to learn movements that are fast and smooth, the learning agent will have to control the motors directly and have low-latency information about the current positions and velocities of the mechanical linkages. The **actions** in this case might be the voltages applied to each motor at each joint, and the **states** might be the latest readings of joint angles and velocities. The **reward** might be +1 for each object successfully picked up and placed. To encourage smooth movements, on each time step a small, negative reward could be given as a function of the moment-to-moment jerkiness of the motion.
 {: .prompt-info }
 
+## Goals and Rewards
+
+Reward Hypothesis:
+
+  That all of what we mean by goals and purposes can be well thought of as the maximization of the expected value of the cumulative sum of a received scalar signal called reward.
+
+> It is critical that the rewards we set up truly indicate what we want accomplished. The reward signal is **not** the place to impart to the agent prior knowledge about **how** to achieve what we want it to do. The reward signal is the way of communicating to the agent *what* we want achieved, *not how* we want it achieved.
+{: .prompt-warning }
+
+## Returns and Episodes
+
+The agent's goal is to maximize the cumulative reward in the long run, called the **expected return** $G_t$
+
+Simplest case: sum of rewards
+$$
+G_t \dot{=} R_{t+1}+R_{t+2}+\cdots+R_T
+$$
+where $T$ is a final time step.
+
+### Episodic Tasks
+
+There is a natural notion of final time step, when the agent-environment interaction breaks naturally into subsequences called **episodes**. Each episode ends in a special state called the **terminal state**. Tasks with episodes are called **episodic tasks**. 
+
+In episodic tasks, sometimes distinguish the set of all nonterminal states $\mathcal{S}$, from the set of all states plus the terminal state $\mathcal{S}^+$. 
+
+### Continuing Tasks
+
+**Continuing tasks**: the agent-environment interaction does not break naturally into identifiable episodes, but goes no continually without limit ($T=\infty$)
+
+Introduce **discounting**: the agent chooses $A_t$ to maximize the expected discounted return
+$$
+G_t \dot{=} R_{t+1} + \gamma R_{t+2} + \gamma^2R_{t+3} +\cdots = \sum_{k=1}^\infty {\gamma^k R_{t+k+1}}
+$$
+where $\gamma\in[0,1]$ is called the discount rate. As $\gamma$ approaches 1, the return objective takes future rewards into account more strongly; the agent becomes more farsighted.
+
+Returns at successive time steps are related to each other (Define $G_T=0$):
+$$
+\begin{align}
+G_t \dot{=}& R_{t+1} + \gamma R_{t+2} + \gamma^2R_{t+3} +\gamma^3 R_{t+4}\cdots\\
+=& R_{t+1} + \gamma(R_{t+2}+\gamma R_{t+3}+\gamma^2R_{t+4})\\
+=& R_{t+1} + \gamma G_{t+1}\quad \forall t<T \\
+\end{align}
+$$
+
+
+ 
