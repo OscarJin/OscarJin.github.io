@@ -1,0 +1,67 @@
+---
+title: Notes on Reinforcement Learning (3)
+date:   2023-01-27 09:06:00 +0800
+categories: [Research, Notes, RL]
+tags: [notes, rl]
+math: true
+img_path: /assets/230127/
+---
+
+# Finite Markov Decision Processes
+
+## The Agent-Environment Interface
+
+- Agent: learner and decision maker
+- Environment: everything outside the agent
+
+![](interaction.jpg)
+_The agent-environment interaction in a MDP_
+
+- Interaction at discrete time steps: $t=0,1,2,3,\dots$
+
+	1. At each time step $t$, the agent receives the environment's **state**, $S_t\in\mathcal{S}$, and on that basis selects an **action** $A_t\in\mathcal{A(s)}$
+	2. One time step later, the agent receives a numerical **reward**, $R_{t+1} \in\mathcal{R}\subset\mathbb{R}$ as a consequence of its action, and finds itself in a new state, $S_{t+1}$
+
+- MDP and Agent $\rightarrow$ a sequence or **trajectory**: $S_0,A_0,R_1,S_1,A_1,R_2,S_2,A_2,R_3,\dots$
+
+  - In a finite MDP, the sets of states, actions and rewards ($\mathcal{S}$, $\mathcal{A}$, $\mathcal{R}$) all have a finite number of elements.
+  - $R_t$ and $S_t$ have well defined discrete probability distributions dependent only on the preceding state and action
+
+  $$
+  p(s',r\vert s,a) \dot{=} P(S_t=s',R_t=r\vert S_{t-1}=s,A_{t-1}=a) \quad \forall s,s'\in\mathcal{S}, r\in\mathcal{R}, a\in\mathcal{A}
+$$
+
+- **Dynamics** of MDP
+
+  - $p$ completely characterize the environment's dynamics
+  - Markov property: the state must include information about all aspects of the past agent-environment interaction that make a difference for the future
+
+> From $p$ we can compute the anything about the environment, such as:
+>
+> - state-transition probabilities:
+>
+> $$
+> p(s'\vert s,a)=\sum_{r\in\mathcal{R}} {p(s',r\vert s,a)}
+> $$
+>
+> - expected rewards for state-action pairs:
+>
+> $$
+> r(s,a) = \sum_{r\in\mathcal{R}}r\sum_{s'\in\mathcal{S}}p(s',r\vert s,a)
+> $$
+>
+> - expected rewards for state-action-next-state triples:
+>
+> $$
+> r(s,a,s')=\sum_{r\in\mathcal{R}}\frac{p(s',r\vert s,a)}{p(s'\vert s,a)}
+> $$
+>
+{: .prompt-tip }
+
+> MDP Framework is a considerable abstraction and can be applied to many different problems in many different ways.
+>
+> **Example**: Pick-and-Place Robot
+>
+> Consider using reinforcement learning to control the motion of a robot arm in a repetitive pick-and-place task. If we want to learn movements that are fast and smooth, the learning agent will have to control the motors directly and have low-latency information about the current positions and velocities of the mechanical linkages. The **actions** in this case might be the voltages applied to each motor at each joint, and the **states** might be the latest readings of joint angles and velocities. The **reward** might be +1 for each object successfully picked up and placed. To encourage smooth movements, on each time step a small, negative reward could be given as a function of the moment-to-moment jerkiness of the motion.
+{: .prompt-info }
+
