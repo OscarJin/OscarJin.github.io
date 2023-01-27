@@ -109,7 +109,114 @@ $$
 \begin{align}
 G_t \dot{=}& R_{t+1} + \gamma R_{t+2} + \gamma^2R_{t+3} +\gamma^3 R_{t+4}\cdots\\
 =& R_{t+1} + \gamma(R_{t+2}+\gamma R_{t+3}+\gamma^2R_{t+4})\\
-=& R_{t+1} + \gamma G_{t+1}\quad \forall t<T \\
+=& R_{t+1} + \gamma G_{t+1}\qquad \forall t<T \\
 \end{align}
 $$
 
+## Unified Notation for Episodic and Continuing Tasks
+
+$S_{t,i}$ - State representation at time $t$ of episode $i$ 
+
+$A_{t,i},~\pi_{t,i},~T_i$
+
+Always consider a particular episode, write $S_t$ to refer to $S_{t,i}$
+
+Unify the definition of return: consider episode termination to be the entering of a special **absorbing state** that transitions only to itself and generates only rewards of 0
+
+Define the return:
+
+$$
+G_t \dot{=} \sum_{k=t+1}^T {\gamma^{k-t-1} R_k}
+$$
+
+## Policies and Value Functions
+
+**Value functions** are functions of states (or of state-action pairs) that estimate **how good** it is for the agent to be in a given state (or how good it is to perform a given action in a given state).
+
+A **policy** is a mapping from states to probabilities of selecting each possible action. RL specify how the agent's policy is changed as a result of its experience.
+
+$v_\pi(s)$ - value function of a state $s$ under a policy $\pi$ (**state-value function** for policy $\pi$)
+
+For MDP, define $v_\pi$ by
+
+$$
+v_\pi(s) \dot{=} \mathbb{E}_\pi[G_t\vert S_t=s] = \mathbb{E}_\pi\left[ \sum_{k=0}^\infty {\gamma^k R_{t+k+1}\Big\vert S_t=s} \right]\quad \forall s\in\mathcal{S}
+$$
+
+$q_\pi(s,a)$ - value function of taking action $a$ in state $s$ under a policy $\pi$ (**action-value function** for policy $\pi$)
+
+$$
+q_\pi(s) \dot{=} \mathbb{E}_\pi[G_t\vert S_t=s, A_t=a]= \mathbb{E}_\pi\left[ \sum_{k=0}^\infty {\gamma^k R_{t+k+1}\Big\vert S_t=s, A_t=a} \right]
+$$
+
+> The value functions $v_\pi$ and $q_\pi$ can be estimated from experience by averaging over many random samples of actual returns (Monte Carlo methods).
+{: .prompt-tip }
+
+**Bellman equation** for $v_\pi$ (recursive relationships similar to return):
+$$
+\begin{align}
+v_\pi(s) \dot{=}& \mathbb{E}_\pi[G_t\vert S_t=s] \\
+=& \mathbb{E}_\pi[R_{t+1}+\gamma G_{t+1}\vert S_t=s]\\
+=& \sum_a {\pi(a\vert s)}\sum_{s'}\sum_r p(s',r\vert s,a)\Big[r+\gamma\mathbb{E}_\pi[G_{t+1}\vert S_{t+1}=s']\Big]\\
+=& \sum_a {\pi(a\vert s)}\sum_{s',r}p(s',r\vert s,a)\Big[r+\gamma v_\pi(s')\Big]\\
+\end{align}
+$$
+
+![](backup_diagram.jpg){: .right }
+
+Bellman equation expresses a relationship between the value of a state and the values of its successor states. **Backup diagrams** show relationships that form the basis of the update or *backup* operations. These operations transfer value information back to a state (or a state-action pair) from its successor states (or state-action pairs)
+
+## Optimal Policies and Optimal Value Functions
+
+Define a policy $\pi$ is better than or equal to $\pi'$ ($\pi\geq\pi'$) if and only if $v_\pi(s)\geq v_{\pi'}(s),\forall s\in\mathcal{S}$
+
+**Optimal policies** $\pi_*$ (may be more than one) share the same state-value function and action-value function
+
+Define **optimal state-value function** $v_*$ and **optimal action-value function** $q_*$:
+
+$$
+\begin{align}
+v_*(s) &\dot{=} \max_\pi v_\pi(s) \qquad \forall s\in\mathcal{S}\\
+q_*(s) &\dot{=} \max_\pi q_\pi(s,a) \quad \forall s\in\mathcal{S}, a\in\mathcal{A}(s)\\
+\end{align}
+$$
+
+Write $q_*$ in terms of $v_*$
+
+$$
+q_*(s,a)=\mathbb{E} [R_{t+1}+\gamma v_*(S_{t+1})\vert S_t=s,A_t=a]
+$$
+
+**Bellman Optimality Equation**
+$$
+\begin{align}
+v_*(s) &= \max_{a\in\mathcal{A}(s)} q_{\pi_*}(s,a)\\
+&= \max_a \mathbb{E}_{\pi_*}[G_t\vert S_t=s,A_t=a]\\
+&= \max_a \mathbb{E}_{\pi_*}[R_{t+1}+\gamma G_{t+1} \vert S_t=s,A_t=a]\\
+&= \max_a \mathbb{E}_{\pi_*}[R_{t+1}+\gamma v_*(S_{t+1})\vert S_t=s,A_t=a]\\
+&= \max_a \sum_{s',r} p(s',r\vert s,a)[r+\gamma v_*(s')]\\
+\end{align}
+$$
+
+$$
+\begin{align}
+q_*(s,a) &= \mathbb{E}\Big[R_{t+1}+\gamma \max_{a'}q_*(S_{t+1},a')\Big\vert S_t=s,A_t=a\Big]\\
+&= \sum_{s',r} p(s',r\vert s,a) \big[r+\gamma \max_{a'}q_*(s',a')\big]\\
+\end{align}
+$$
+
+If we have the optimal value function $v_*$, then the actions that appear best after a one-step search will be optimal actions.
+
+> The one-step greedy policy is actually optimal in the long-term sense because $v_*$ already takes into account the reward consequences of all possible future behavior. By means of $v_*$, the optimal expected long-term return is turned into a quantity that is locally and immediately available for each state.
+{: .prompt-info}
+
+With $q_*$, the agent does not even have to do a one-step-ahead search: for any state $s$, it can simply find any action that maximizes $q_*(s,a)$
+
+> Explicitly solving the Bellman optimality equation provides one route to finding an optimal policy, and thus to solving the RL problem. However, this solution is rarely directly useful.
+{: .prompt-warning}
+
+## Optimality and Approximation
+
+Optimality is an ideal. Framing of RL problem forces us to settle for **approximations**.
+
+The online nature of RL makes it possible to approximate optimal policies in ways that put more effort into learning to make good decisions for frequently encountered states, at the expense of less effort for infrequently encountered states.
