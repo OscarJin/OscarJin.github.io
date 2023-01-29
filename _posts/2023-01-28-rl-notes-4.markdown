@@ -169,7 +169,7 @@ Policy iteration consists two simultaneous, interacting processes:
 
 Almost all RL methods are well described as GPI (all have identifiable policies and value functions, with the policy always being improved w.r.t. value function and the value function always being driven toward the value function for the policy)
 
-![](GPI.jpg){:width=200}
+![](GPI.jpg){:width=100}
 
 Evaluation and Improvement processes can be viewed as **competing** and **cooperating**:
 
