@@ -1,0 +1,37 @@
+---
+title: Notes on Reinforcement Learning (5)
+date:   2023-01-31 14:38:00 +0800
+categories: [Research, Notes, RL]
+tags: [notes, rl]
+math: true
+img_path: /assets/230131/
+---
+
+# Monte Carlo Methods
+
+- MC methods are ways of solving RL problem based on averaging sample returns.
+- MC methods sample and average *returns* for each state-action pair and average *rewards* for each action.
+- MC methods require only experience - sample sequences of states, actions and rewards from actual or simulated interaction with an environment.
+
+## Monte Carlo Prediction
+
+Consider MC methods for learning the state-value function for a given policy
+
+Suppose: estimate the value of a state $s$ under policy $\pi$, $v_\pi(s)$
+
+Each occurrence of state $s$ in an episode is called a **visit** to $s$ ($s$ may be visited multiple times in the same episode)
+
+- **First-visit MC method** estimates $v_\pi(s)$ as the average of returns following first visits to $s$ (most widely studied)
+- **Every-visit MC method** averages the returns following all visits to $s$
+
+![](first-visit-mc-prediction.jpg)
+
+Generalize the idea of backup diagrams to MC algorithms:
+
+- For MC estimation of $v_\pi$, the root is a state node, and below it is the entire trajectory of transitions along a particular single episode, ending at the terminal state
+- MC vs DP
+  - DP shows all possible transitions, MC shows only those sampled on the one episode
+  - DP includes only one-step transitions, MC goes all the way to the end of the episode
+
+![](mc-backup-diagram.jpg){: .right w="100"}
+
