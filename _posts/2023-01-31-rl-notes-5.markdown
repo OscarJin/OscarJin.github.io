@@ -34,6 +34,109 @@ Generalize the idea of backup diagrams to MC algorithms:
 - MC vs DP
   - DP shows all possible transitions, MC shows only those sampled on the one episode
   - DP includes only one-step transitions, MC goes all the way to the end of the episode
+  - DP bootstraps, MC does not (the estimates for each state are independent)
 
+## Monte Carlo Estimation of Action Values
 
+> If a model is not available, it's particularly useful to estimate action values rather than state values. Without a model, state values alone are not sufficient to determine a policy.
+{: .prompt-info}
+
+Policy evaluation problem for action values: estimate $q_\pi(s,a)$,  the expected return when starting in state $s$, taking action $a$, and thereafter following policy $\pi$
+
+**Visit** to a state-action pair: the state $s$ is visited and action $a$ is taken in an episode
+
+Problem: **maintaining exploration**
+
+- If $\pi$ is a deterministic policy, following $\pi$ will observe returns only for one of the actions from each state. Many state-action pairs may never be visited
+- Solution: every state-action pair has a nonzero probability of being selected as the start (**exploring starts**)
+
+> Exploring starts cannot be relied upon in general, particularly when learning directly from actual interaction with an environment (the starting conditions are unlikely to be so helpful)
+{: .prompt-warning}
+
+- Alternative solution: consider only policies that are stochastic with a nonzero probability of selecting actions in each state
+
+## Monte Carlo Control
+
+Consider using MC estimation in control (approximate optimal policies)
+
+Idea of GPI: maintain both an approximate policy and an approximate value function
+
+![](GPI.jpg){: width="100"}
+
+Consider a MC version of classical policy iteration: perform alternating complete steps of policy evaluation and policy improvement, beginning with an arbitrary policy $\pi_0$ and ending with the optimal policy and optimal action-value function:
+
+$$
+\pi_0 \stackrel{E}{\longrightarrow} q_{\pi_0} \stackrel{I}{\longrightarrow} \pi_1 \stackrel{E}{\longrightarrow} q_{\pi_1} \stackrel{I}{\longrightarrow} \pi_2 \stackrel{E}{\longrightarrow} \cdots \stackrel{I}{\longrightarrow} \pi_\ast \stackrel{E}{\longrightarrow} q_\ast
+$$
+
+Policy improvement: construct each $\pi_{k+1}$ as the greedy policy w.r.t. $q_{\pi_k}$
+
+$$
+\pi(s)\dot{=} \arg\max_a q(s,a)
+$$
+
+> The policy improvement theorem applies to $\pi_k$ and $\pi_{k+1}$
+> 
+> Proof:
+>
+> $$
+> \begin{align}
+> q_{\pi_k}(s,\pi_{k+1}(s))\dot{=}& q_{\pi_k}(s, \arg\max_a q_{\pi_k}(s,a))\\
+> =& \max_a q_{\pi_k}(s,a)\\
+> \geq& q_{\pi_k}(s,\pi_k(s))\\
+> \geq& v_{\pi_k}(s)\quad \forall s\in\mathcal{S}\\
+> \end{align}
+> $$
+> 
+{: .prompt-info}
+
+Two unlikely assumptions:
+
+- The episodes have exploring starts
+- Policy evaluation could be done with an infinite number of episodes
+
+Now remove the second assumption
+
+- Solution 1: idea of approximating $q_{\pi_k}$
+
+  Make measurements and assumptions to obtain bounds on the magnitude and probability of error in the estimates, and then take sufficient steps to assure these bounds are sufficiently small
+
+- Solution 2: give up complete policy evaluation before returning to policy improvement
+
+  On each evaluation step, move the value function toward $q_{\pi_k}$
+
+![](MCES.jpg)
+
+## Monte Carlo Control without Exploring Starts
+
+- **On-policy methods** attempt to evaluate or improve the policy that is used to make decisions
+- **Off-policy methods** attempt to evaluate or improve the policy different from that used to generate the data
+
+### On-Policy Methods without Exploring Starts
+
+- **Soft** policy: $\pi(a\vert s)>0,~\forall s\in\mathcal{S},a\in\mathcal{A}(s)$, but gradually shifted closer to a deterministic optimal policy
+- **$\varepsilon$-soft** policies: $\pi(a\vert s)\geq \frac{\varepsilon}{\vert\mathcal{A}(s)\vert}$ for all states and actions
+- **$\varepsilon$-greedy** policies: most of the time choose an action that has maximal estimated action value, but with probability $\varepsilon$ select an action at random
+  - Probability of selecting nongreedy actions: $\frac{\varepsilon}{\vert \mathcal{A}(s)\vert}$
+  - Probability of selecting greedy actions: $1-\varepsilon+\frac{\varepsilon}{\vert \mathcal{A}(s)\vert}$
+
+In on-policy MC method, move the policy only to an $\varepsilon$-greedy policy. For any $\varepsilon$-soft policy $\pi$, any $\varepsilon$-greedy policy w.r.t. $q_\pi$ is better than or equal to $\pi$
+
+![](on-policy.jpg)
+
+> Let $\pi'$ be the $\varepsilon$-greedy policy, prove that $\pi'\geq\pi$
+>
+> $$
+> \begin{align}
+> q_\pi(s,\pi'(s)) &= \sum_a \pi'(a\vert s) q_\pi(s,a)\\
+> &= \frac{\varepsilon}{\vert \mathcal{A}(s)\vert}\sum_a q_\pi(s,a) + (1-\varepsilon)\max_a q_\pi(s,a)\\
+> &\geq \frac{\varepsilon}{\vert \mathcal{A}(s)\vert}\sum_a q_\pi(s,a) + (1-\varepsilon)\sum_a\frac{\pi(a\vert s)-\frac{\varepsilon}{\vert \mathcal{A}(s)\vert}}{1-\varepsilon}q_\pi(s,a)\\
+> &=  \frac{\varepsilon}{\vert \mathcal{A}(s)\vert}\sum_a q_\pi(s,a) - \frac{\varepsilon}{\vert \mathcal{A}(s)\vert}\sum_a q_\pi(s,a) + \sum_a \pi(a\vert s)q_\pi(s,a)\\
+> &= v_\pi(s)
+> \end{align}
+> $$
+> 
+{: .prompt-info}
+
+The cost of eliminating the assumption of exploring starts is that we only achieve the best policy among the $\varepsilon$-soft policies.
 

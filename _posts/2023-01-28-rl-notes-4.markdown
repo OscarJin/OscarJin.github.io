@@ -102,9 +102,9 @@ Extension: consider changes at all states (the new **greedy** policy $\pi'$)
 
 $$
 \begin{align}
-\pi'(s) \dot{=}& {\arg\max}_a q_\pi(s,a)\\
-=& {\arg\max}_a \mathbb{E}\big[R_{t+1}+\gamma v_\pi (S_{t+1})\big\vert S_t=s, A_t=a\big]\\
-=& {\arg\max}_a \sum_{s',r} p(s',r\vert s,a)\big[r+\gamma v_\pi(s')\big]\\
+\pi'(s) \dot{=}& {\arg\max_a} q_\pi(s,a)\\
+=& {\arg\max_a} \mathbb{E}\big[R_{t+1}+\gamma v_\pi (S_{t+1})\big\vert S_t=s, A_t=a\big]\\
+=& {\arg\max_a} \sum_{s',r} p(s',r\vert s,a)\big[r+\gamma v_\pi(s')\big]\\
 \end{align}
 $$
 
