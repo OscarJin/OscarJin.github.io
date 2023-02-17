@@ -11,3 +11,53 @@ TD learning is a combination of MC ideas and DP ideas.
 
 - Like MC methods, TD methods can learn directly from raw experience without a model of the environments dynamics.
 - Like DP, TD methods update estimates based in part on other learned estimates, without waiting for a final outcome.
+- For the control problem (finding an optimal policy), DP, TD and MC all use some variation of GPI.
+
+## TD Prediction
+
+Both TD and MC methods use experience to solve the prediction problem.
+
+MC methods wait until the return following the visit is known, then use that return as a target for $V(S_t)$
+
+$$
+V(S_t) \leftarrow V(S_t)+\alpha \big[G_t-V(S_t)\big]
+$$
+
+MC methods must wait until the end of the episode to determine the increment to $V(S_t)$ (only then is $G_t$ known), TD methods need to wait only until the next time step. At time $t+1$ they immediately form a target and make a useful update using the observed reward $R_{t+1}$ and the estimate $V(S_{t+1})$
+
+$$
+V(S_t)\leftarrow V(S_t)+\alpha\big[R_{t+1}+\gamma V(S_{t+1})-V(S_t)\big]
+$$
+
+> The target for MC update is $G_t$, whereas the target for the TD update is $R_{t+1}+\gamma V(S_{t+1})$.
+> 
+{:.prompt-tip}
+
+This TD method is called **TD(0)** or **one-step TD**.
+
+![](td0.png)
+
+TD(0) is a *bootstrapping* method (it bases its update in part on an existing estimate). TD methods combine the sampling of MC with the bootstrapping of DP.
+
+![](td0-backup.png){: width="200"}
+_Backup diagram for tabular TD(0)_
+
+The value estimate for the state node at the top of the backup diagram is updated on the basis of the one sample transition from it to the immediately following state. We refer to TD updates as **sample updates** because they involve looking ahead to a sample successor state (or state–action pair), using the value of the successor and the reward along the way to compute a backed-up value, and then updating the value of the original state (or state–action pair) accordingly.
+
+**TD error**: difference between the estimated value of $S_t$ and the better estimate $R_{t+1}+\gamma V(S_{t+1})$
+$$
+\delta_t\dot{=} R_{t+1}+\gamma V(S_{t+1})-V(S_t)
+$$
+
+If the array $V$ doesn't change during the episode, then the MC error can be written as a sum of TD errors:
+
+$$
+\begin{align}
+G_t-V(S_t) &= R_{t+1}+\gamma G_{t+1}-V(S_t)+\gamma V(S_{t+1})-\gamma V(S_{t+1})\\
+&= \delta_t+\gamma (G_{t+1}-V(S_{t+1}))\\
+&= \delta_t+\gamma\delta_{t+1}+\gamma^2(G_{t+2}-V(S_{t+2}))\\
+&= \cdots\\
+&=\sum_{k=t}^{T-1}\gamma^{k-t}\delta_k
+\end{align}
+$$
+If the step size is small, it may still hold approximately.
