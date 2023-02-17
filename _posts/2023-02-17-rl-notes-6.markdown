@@ -1,0 +1,13 @@
+---
+title: Temporal-Difference Learning
+date:   2023-02-17 10:28:00 +0800
+categories: [Research, Notes, RL]
+tags: [notes, rl]
+math: true
+img_path: /assets/230217/
+---
+
+TD learning is a combination of MC ideas and DP ideas.
+
+- Like MC methods, TD methods can learn directly from raw experience without a model of the environments dynamics.
+- Like DP, TD methods update estimates based in part on other learned estimates, without waiting for a final outcome.
