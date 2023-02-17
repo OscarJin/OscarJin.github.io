@@ -1,5 +1,5 @@
 ---
-title: Notes on Reinforcement Learning (4)
+title: Dynamic Programming
 date:   2023-01-28 09:07:00 +0800
 categories: [Research, Notes, RL]
 tags: [notes, rl]
@@ -7,7 +7,6 @@ math: true
 img_path: /assets/230128/
 ---
 
-# Dynamic Programming
 
 DP can be used to compute optimal policies given a perfect model of the environment as a MDP.
 

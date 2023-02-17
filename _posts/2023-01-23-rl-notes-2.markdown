@@ -1,5 +1,5 @@
 ---
-title: Notes on Reinforcement Learning (2)
+title: Multi-armed Bandits
 date:   2023-01-23 09:49:00 +0800
 categories: [Research, Notes, RL]
 tags: [notes, rl]

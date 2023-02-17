@@ -1,5 +1,5 @@
 ---
-title: Notes on Reinforcement Learning (5)
+title: Monte Carlo Methods
 date:   2023-01-31 14:38:00 +0800
 categories: [Research, Notes, RL]
 tags: [notes, rl]
@@ -7,7 +7,6 @@ math: true
 img_path: /assets/230131/
 ---
 
-# Monte Carlo Methods
 
 - MC methods are ways of solving RL problem based on averaging sample returns.
 - MC methods sample and average *returns* for each state-action pair and average *rewards* for each action.

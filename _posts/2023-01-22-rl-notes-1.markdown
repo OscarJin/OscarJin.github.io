@@ -1,5 +1,5 @@
 ---
-title: Notes on Reinforcement Learning (1)
+title: Introduction to Reinforcement Learning
 date:   2023-01-22 10:47:00 +0800
 categories: [Research, Notes, RL]
 tags: [notes, rl]
@@ -23,7 +23,6 @@ math: true
 }
 </style>
 
-# Introduction
 
 Reinforcement learning is focused on **goal-directed** learning from interaction.
 

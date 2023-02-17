@@ -1,5 +1,5 @@
 ---
-title: Notes on Reinforcement Learning (3)
+title: Finite Markov Decision Processes
 date:   2023-01-27 09:06:00 +0800
 categories: [Research, Notes, RL]
 tags: [notes, rl]
@@ -7,7 +7,6 @@ math: true
 img_path: /assets/230127/
 ---
 
-# Finite Markov Decision Processes
 
 ## The Agent-Environment Interface
 
