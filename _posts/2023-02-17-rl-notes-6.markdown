@@ -70,3 +70,48 @@ TD methods update their estimates based in part on other estimates (they *bootst
 - TD methods are naturally implemented in an online, fully incremental fashion. (advantage over MC, with MC methods one must wait until the end of an episode)
 - For any fixed policy $\pi$, TD(0) has been proved to converge to $v_\pi$, in the mean for a constant step-size parameter if it's sufficiently small, and with probability 1 if the step-size parameter decreases according to the usual stochastic approximation conditions. TD methods have usually been found to converge faster than constant-$\alpha$ MC methods on stochastic tasks.
 
+## Optimality of TD(0)
+
+**Batch updating**: Given an approximate value function, $V$ , the increments are computed for every time step $t$ at which a nonterminal state is visited, but the value function is changed only once, by the sum of all the increments. Then all the available experience is processed again with the new value function to produce a new overall increment, and so on, until the value function converges.
+
+As long as $\alpha$ is sufficiently small, TD(0) and constant-$\alpha$ MC both converge, but to two different answers.
+
+Batch MC methods always find the estimates that minimize MSE on the training set, whereas batch TD(0) always find the estimates that would be exactly correct for the *maximum-likelihood* model of the Markov process. 
+
+In general, TD(0) converges to the **certainty-equivalence estimate** (equivalent to assuming that the estimate of the underlying process was known with certainty rather than being approximated).
+
+## Sarsa: On-policy TD Control
+
+The use of TD prediction methods for the control problem
+
+Two classes: on-policy & off-policy
+
+1. Learn an action-value function
+
+$$
+Q(S_t,A_t)\leftarrow Q(S_t,A_t) +\alpha \big[R_{t+1}+\gamma Q(S_{t+1},A_{t+1}) - Q(S_t,A_t) \big]
+$$
+
+If $S_{t+1}$ is terminal, then $Q(S_{t+1},A_{t+1}) \dot{=} 0$
+
+This rule uses every element of the quintuple of events, $(S_t, A_t, R_{t+1}, S_{t+1},A_{t+1})$, that make up a transition from one state-action pair to the next (this quintuple give rise to the name Sarsa)
+
+2. Design an on-policy control algorithm based on the Sarsa prediction method
+
+As in all on-policy methods, continually estimate $q_\pi$ for the behavior policy $\pi$ and at the same time change $\pi$ toward greediness w.r.t. $q_\pi$. 
+
+![](sarsa.png)
+_General form of the Sarsa control algorithm_
+
+## Q-learning: Off-policy TD Control
+
+Update rule:
+
+$$
+Q(S_t,A_t) \leftarrow Q(S_t,A_t) +\alpha\big[R_{t+1} +\gamma\max_aQ(S_{t+1},a) - Q(S_t,A_t) \big]
+$$
+
+The learned action-value function, $Q$, directly approximates the optimal action-value function, $q_\ast$, independent of the policy being followed.
+
+![](q-learning.png)
+
