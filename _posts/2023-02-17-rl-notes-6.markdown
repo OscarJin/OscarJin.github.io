@@ -61,3 +61,12 @@ G_t-V(S_t) &= R_{t+1}+\gamma G_{t+1}-V(S_t)+\gamma V(S_{t+1})-\gamma V(S_{t+1})\
 \end{align}
 $$
 If the step size is small, it may still hold approximately.
+
+## Advantages of TD Prediction Methods
+
+TD methods update their estimates based in part on other estimates (they *bootstrap*),
+
+- TD methods don't require a model of the environment, of its reward and next-state probability distributions. (advantage over DP)
+- TD methods are naturally implemented in an online, fully incremental fashion. (advantage over MC, with MC methods one must wait until the end of an episode)
+- For any fixed policy $\pi$, TD(0) has been proved to converge to $v_\pi$, in the mean for a constant step-size parameter if it's sufficiently small, and with probability 1 if the step-size parameter decreases according to the usual stochastic approximation conditions. TD methods have usually been found to converge faster than constant-$\alpha$ MC methods on stochastic tasks.
+
