@@ -115,3 +115,33 @@ The learned action-value function, $Q$, directly approximates the optimal action
 
 ![](q-learning.png)
 
+## Expected Sarsa
+
+Consider the learning algorithm that is just like Q-learning except that instead of the maximum over next state-action pairs it uses the expected value, taking into account how likely each action is under the current policy.
+
+Update rule:
+
+$$
+\begin{align}
+Q(S_t,A_t)&\leftarrow Q(S_t,A_t)+\alpha \big[R_{t+1} + \gamma\mathbb{E}_\pi[Q(S_{t+1},A_{t+1})\vert S_{t+1}] - Q(S_t,A_t) \big]\\
+&= Q(S_t,A_t)+\alpha \big[R_{t+1} + \gamma\sum_a \pi(a\vert S_{t+1})Q(S_{t+1},a)-Q(S_t,A_t) \big]\\
+\end{align}
+$$
+
+Given the next state $S_{t+1}$, this algorithm moves deterministically in the same direction as Sarsa moves *in expectation*, and accordingly it's called **Expected Sarsa**.
+
+Expected Sarsa performs slightly better than Sarsa, but is more complex computationally than Sarsa.
+
+![](q-expected-sarsa-backup.png)
+_The backup diagrams for Q-learning and Expected Sarsa_
+
+## Maximization Bias and Double Learning
+
+All the control algorithms discussed so far involve maximization in the construction of their target policies. In these algorithms, a maximum over estimated values is used implicitly as an estimate of the maximum value, which can lead to a significant positive bias, called **maximization bias**.
+
+> Understand maximization bias:
+>
+> Consider a single state $s$ where there are many actions $a$ whose true values $q(s,a)$ are all zero but whose estimated values $Q(s,a)$ are uncertain and thus distributed some above and some below zero. The maximum of the true values is zero, but the maximum of the estimates is positive.
+> 
+{:.prompt-info}
+
