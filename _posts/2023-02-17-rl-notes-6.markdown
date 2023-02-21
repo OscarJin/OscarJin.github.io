@@ -145,3 +145,27 @@ All the control algorithms discussed so far involve maximization in the construc
 > 
 {:.prompt-info}
 
+Avoid maximization bias: the idea of **double learning**
+
+Use one estimate $Q_1(a)$ to determine the maximizing action $A^\ast=\arg\max_a Q_1(a)$, and the other $Q_2(a)$ to provide the estimate of its value $Q_2(A^\ast)=Q_2(\arg\max_aQ_1(a))$
+
+This estimate will then be unbiased: $\mathbb{E}[Q_2(A^\ast)]=q(A^\ast)$
+
+> Note:
+>
+> 1. Although we learn two estimates, only one estimate is updated on each play.
+> 2. Double learning doubles the memory requirements, but does not increase the amount of computation per step.
+> 
+{:.prompt-warning}
+
+Update rule of **Double Q-learning**:
+
+$$
+Q_1(S_t,A_t)\leftarrow Q_1(S_t,A_t)+\alpha \big[R_{t+1} +\gamma Q_2(S_{t+1},\arg\max_a Q_1(S_{t+1},a))-Q_1(S_t,A_t) \big]
+$$
+
+Update $Q_1$ and $Q_2$ each with 0.5 probability.
+
+![](double-q.png)
+_A complete algorithm for Double Q-learning_
+
