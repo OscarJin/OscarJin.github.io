@@ -9,7 +9,11 @@ order: 4
 
 Welcome to Oscar Jin's website!
 
-Oscar Jin is an undergraduate Tsinghua University, majoring in **Mechanical Engineering**. <!--His current research topics focus on the computational design and simulation of robots.-->
+Oscar Jin is an undergraduate from Tsinghua University, majoring in **Mechanical Engineering**. <!--His current research topics focus on the computational design and simulation of robots.-->
 
-Oscar is also fond of **landscape photography** and is the contract photographer of Visual China and Getty Images. He will publish a selection of his works in the [Gallery](https://oscarjin.github.io/categories/gallery/) on this website.
+He is now interested in:
+
+- [Reinforcement Learning](https://oscarjin.github.io/categories/rl/)
+
+Besides, Oscar is fond of **landscape photography** and is the contract photographer of Visual China and Getty Images. He will publish a selection of his works in the [Gallery](https://oscarjin.github.io/categories/gallery/) on this website.
 
