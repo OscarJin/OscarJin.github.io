@@ -1,13 +1,13 @@
 ---
 title: Modeling Shell-Reinforced Bending SPA using Abaqus
-date:   2023-02-17 10:28:00 +0800
+date:   2023-03-04 17:28:00 +0800
 categories: [Research, Notes, Abaqus]
 tags: [notes, abaqus, soft-actuator]
 math: true
 img_path: /assets/230304/
 ---
 
-In this note, a demo of a shell-reinforced bending soft pneumatic actuator is presented. From the demo, we can have a general idea of the procedures of **implicit dynamic analysis** using Abaqus.
+In this note, a demo of a shell-reinforced bending soft pneumatic actuator (SPA) is presented. From the demo, we can have a general idea of the procedures of **implicit dynamic analysis** using Abaqus.
 
 References:
 
@@ -37,7 +37,7 @@ In the demo, the chamber is made in Exoflex-30 material while the thin un-stretc
 
 The material Ecoflex-30 is modeled using a **hyperelastic** model. A 3-term Ogden model is used for Ecoflex-30 in this example, with the following coefficients:
 
-mu1 = 0.001887; alpha 1 = -3.848; mu2 = 0.02225; alpha2 = 0.663; mu3= 0.003574; alpha 3 = 4.225; D1 = 2.93; D2 = 0; D3 = 0
+mu1 = 0.001887; alpha1 = -3.848; mu2 = 0.02225; alpha2 = 0.663; mu3= 0.003574; alpha 3 = 4.225; D1 = 2.93; D2 = 0; D3 = 0
 
 ![](ecoflex-30.png)
 _Hyperelastic property of Ecoflex-30_
@@ -56,9 +56,9 @@ _Sections of the model_
 
 Assign the part (section) Cylinder with the material Ecoflex-30 and Shell with plastic.
 
-> Material can only be assgined to a part when a section is defined.
+> Material can only be assigned to a part when a section is defined.
 > 
-{:.prompt-info}
+{:.prompt-tip}
 
 ## Step 3: Define Assembly
 
