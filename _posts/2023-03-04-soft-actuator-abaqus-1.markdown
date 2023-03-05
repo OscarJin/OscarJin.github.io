@@ -1,5 +1,5 @@
 ---
-title: Modeling Shell-Reinforced Linear SPA using Abaqus
+title: Modeling Shell-Reinforced Bending SPA using Abaqus
 date:   2023-02-17 10:28:00 +0800
 categories: [Research, Notes, Abaqus]
 tags: [notes, abaqus, soft-actuator]
@@ -7,12 +7,13 @@ math: true
 img_path: /assets/230304/
 ---
 
-In this note, a demo of a shell-reinforced linear soft pneumatic actuator is presented. From the demo, we can have a general idea of the procedures of dynamic analysis using Abaqus.
+In this note, a demo of a shell-reinforced bending soft pneumatic actuator is presented. From the demo, we can have a general idea of the procedures of **implicit dynamic analysis** using Abaqus.
 
 References:
 
-1. [Modeling soft pneumatic actuators][https://softroboticstoolkit.com/book/modeling-soft-pneumatic-actuators/modeling]
-2. [Open-source models for bending shell-reinforced actuators][http://sandbox.softroboticstoolkit.com/book/scripts]
+1. [Modeling soft pneumatic actuators][modeling]
+2. [Open-source models for bending shell-reinforced actuators][model-src]
+
 
 ## Step 1: Create Actuator Geometry (Parts)
 
@@ -28,7 +29,9 @@ The following geometry is generated in Abaqus CAE for a bending actuator with an
 ![](shell_model.jpg)
 _Shell part of the linear actuator (4 parts are created, namely Cuts, Cylinder, Shell and Shell with Cuts)_
 
-## Step 2: Define Material Constitutive Model
+## Step 2: Define Properties
+
+### Material Constitutive Model
 
 In the demo, the chamber is made in Exoflex-30 material while the thin un-stretchable shell layer is made of a plastic material such as PET.
 
@@ -43,3 +46,75 @@ The shell is modeled using a linear elastic model (due to stresses in shell not 
 
 ![](plastic.png)
 _Linear elastic property of plastic_
+
+### Sections and Material Assignment
+
+Create the sections of the parts of the actuator (Cylinder and Shell), using the default settings.
+
+![](sections.png)
+_Sections of the model_
+
+Assign the part (section) Cylinder with the material Ecoflex-30 and Shell with plastic.
+
+> Material can only be assgined to a part when a section is defined.
+> 
+{:.prompt-info}
+
+## Step 3: Define Assembly
+
+1. **Create Instances** to add parts to the assembly.
+2. We can further create some Sets and Surfaces, such as the inner of the tube (Tube_Inner).
+
+![](tube_inner.png)
+_Create inner surface of the tube_
+
+## Step 4: Define Steps
+
+### Define Implicit Dynamic Step
+
+- Time period: 200
+- Nlgeom: On
+
+> Nlgeom must be turned **on** for large deformation!
+>
+{:.prompt-warning}
+
+- Application: Quasi-static
+- Incrementation Type: Automatic
+- Maximum number of increments: 10000
+- Increment size: Initial 15, Minimum 1E-6, Maximum 15
+
+![](step.png)
+_Incrementation of the step defined_
+
+### Define Field Output
+
+- F-Output-1
+
+![](f-output-1.png)
+
+- Pressure
+
+![](pressure-output.png)
+
+### Define History Output
+
+- H-Output-1
+
+![](h-output-1.png)
+_Choose all items in 'Energy'_
+
+- Displacement
+
+![](displacement.png)
+
+## Step 5: Meshing
+
+![](mesh.png)
+_Meshing result_
+
+
+
+
+[modeling]: https://softroboticstoolkit.com/book/modeling-soft-pneumatic-actuators/modeling
+[model-src]: http://sandbox.softroboticstoolkit.com/book/scripts
