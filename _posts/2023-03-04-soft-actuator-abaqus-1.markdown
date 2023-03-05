@@ -110,9 +110,61 @@ _Choose all items in 'Energy'_
 
 ## Step 5: Meshing
 
+In this case, due to the hyperelastic behavior of the material used to create the actuator core, **standard linear 3-D stress elements** are used with hybrid formulation and reduced integration. 
+
+For the **shell** structure, **standard linear shell elements** with reduced integration are used. The following image shows the mesh generated for the shell, as an example.
+
 ![](mesh.png)
 _Meshing result_
 
+## Step 6: Define Interactions
+
+> To achieve bending motion profile, a thin strip portion at the bottom of the shell is attached to the core surface using an adhesive. The shell is permitted to slide over the surface of the actuator and guide its trajectory in the remaining portions. To implement this condition in Abaqus, a tie constraint is imposed at the thin unstretchable portion while a contact property is defined to include finite sliding in tangential orientation with a specified coefficient of friction in the remaining portions.
+> 
+{:.prompt-info}
+
+First define the **interaction property** *Tangential Behavior*:
+
+- Friction formulation: Penalty
+- Friction Coeff.: 0.2
+
+![](interaction-behavior.png)
+
+Then define the sliding interaction between the cylinder and the shell.
+
+![](sliding.png)
+
+## Step 7: Define Pressure Loads
+
+An input pressure of 50 kPa was specified on the chamber walls.
+
+![](pressure.png)
+
+## Step 8: Define Boundary Conditions (BCs)
+
+- Half Symmetry
+
+![](symm-shell.png)
+_Half symmetry of shell_
+
+![](symm-y.png)
+_Half symmetry of cylinder_
+
+- No translation or rotation for the inlet portion
+
+![](fixed-end.png)
+_Fixed end_
+
+## Step 9: Create Job
+
+Create a job using the default settings and Submit!
+
+## Step 10: Post-processing
+
+A variety of analysis can be performed.
+
+![](result.png)
+_Abaqus ODB result plots for linear extension motion generated are shown for the free displacement condition_
 
 
 
