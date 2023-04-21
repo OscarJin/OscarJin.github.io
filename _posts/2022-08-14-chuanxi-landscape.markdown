@@ -3,7 +3,6 @@ title:  Landscape in West Sichuan
 date:   2022-08-17 18:00:00 +0800
 categories: [Gallery, Sichuan]
 tags: [photography, landscape, mountains, astronomy]
-pin: true
 ---
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
