@@ -1,7 +1,7 @@
 ---
 title: Modeling Shell-Reinforced Bending SPA using Abaqus
 date:   2023-03-04 17:28:00 +0800
-categories: [Research, Notes, Abaqus]
+categories: [Research, Soft Robots]
 tags: [notes, abaqus, soft-actuator]
 math: true
 img_path: /assets/230304/
