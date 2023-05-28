@@ -1,7 +1,7 @@
 ---
 title: Multi-armed Bandits
 date:   2023-01-23 09:49:00 +0800
-categories: [Research, Notes, RL]
+categories: [Research, Reinforcement Learning]
 tags: [notes, rl]
 math: true
 ---
