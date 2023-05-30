@@ -76,6 +76,81 @@ Morphology:
 
 ![5](5.png)
 
-Bending motion primitives:
+**Bending motion** primitives:
 
 Combining actuation in the x and y directions allows for bending in any direction with zero rotation around the longitudinal axis.
+
+### Kinematic modeling
+
+PCC-based kinematic model
+
+#### Segment deformation
+
+This simplified deformation model suggests that a significant portion of the actuator will deform under approximately constant curvature.
+
+![7](7.png)
+
+Consider the case of one of the segment's channels deforming under pressure.
+
+1. Divide the channel in $J$ cross-sectional slices of uniform z-axis length cut parallel to the x-y plane.
+2. Iteratively apply the model each time increasing $p_c$. At each iteration the channel’s circumferential and longitudinal deformed dimensions are recalculated based on the material stresses that are derived from the previous iteration’s deformed geometry.
+
+![8](8.png)
+
+#### Stresses and strains
+
+Approximate the circumferential stress $\sigma_c$ in a thin cross-sectional channel slice by balancing static forces (Figure 7c).
+$$
+2\sigma_{ci}\hat{t_i}\tilde{w}_i\approx p_c\frac{\hat{h}_{i-1}+\hat{h}_i}{2}\tilde{w}_i \quad \forall~i=1,\dots,J
+$$
+
+$$
+\sigma_{ci}\approx\frac{p_c\hat{h}_{i-1}^2}{4b\hat{t}_i\left(\hat{t}_i+\hat{h}_{i-1}\right)} \quad \forall~i
+$$
+
+When $\hat{h}_{i-1}=\hat{h}_i$
+$$
+\sigma_{ci}\approx p_c\frac{\hat{h}_{i-1}}{2\hat{t}_i}\quad\forall~i
+$$
+
+Similarly, the longitudinal stress $\sigma_L$
+$$
+\sigma_{Li}\approx\frac{p_c\hat{h}_{i-1}^2}{4b\hat{t}_i\left(\hat{t}_i+\hat{h}_{i-1}\right)}\quad\forall~i=1,\dots,J
+$$
+Free parameter: $b$ (to better match experimentally observed deformations)
+
+Circumferential and longitudinal strain $\epsilon_c,~\epsilon_L$ can be determined by a look-up table based on stress.
+
+#### Updating channel geometry
+
+Express the **elongated wall** $\hat{w}$, the **expanded diameter** $\hat{h}$ and **compressed thickness** $\hat{t}$ using strain and the initial channel geometry.
+
+The accumulated angle $\theta$ along the neutral axis at this simulation iteration
+
+![eqn12](eqn12.png)
+
+#### Conditions for constant curvature
+
+Only the actuated region of the segment, i.e. the channel with arc length $L$ is expected to deform under constant curvature.
+
+#### Segment transformation
+
+Transformation from the base of a segment to the tip
+$$
+\mathbf{S}_\mathrm{tip}^\mathrm{base}=\mathbf{R}_z(\gamma)~\mathbf{T}_z(L_P)~\mathbf{R}_y\left(\frac{\theta}{2}\right)~\mathbf{T}_z(d(\theta))~\mathbf{R}_y\left(\frac{\theta}{2}\right)~\mathbf{T}_z(L_P)
+$$
+The kinematics of a multi-segment soft arm composed of N segments can be represented by cascading single segment transformations together:
+$$
+\mathbf{M}_\mathrm{tipN}^\mathrm{base}=\prod_{i=1}^N \mathbf{S}_\mathrm{tip}^\mathrm{base}(\gamma_i,~\theta_i)
+$$
+
+#### Model evaluations
+
+Compare **bending angle** $\theta$ at each incremental fill level.
+
+#### Limitations
+
+- Deviate at lower pressures
+- Not directly establish the validity of the PCC-based model's ability to describe the backbone's continuous deformation
+- Physical limitations. (maximum achievable bend angle of a segment)
+- Force output limitation.(When the rubber is subject to high rates of strain, the material exhibits increased stiffness and more effectively transfers input fluid energy into actuator tip force. Then, when the load is constant, the elastomer exhibits a decrease in stiffness and accordingly the actuator’s channel expands under the fluid energy lessening the actuator’s tip force)
