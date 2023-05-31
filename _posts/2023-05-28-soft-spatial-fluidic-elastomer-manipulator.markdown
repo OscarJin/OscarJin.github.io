@@ -126,8 +126,10 @@ Circumferential and longitudinal strain $\epsilon_c,~\epsilon_L$ can be determin
 Express the **elongated wall** $\hat{w}$, the **expanded diameter** $\hat{h}$ and **compressed thickness** $\hat{t}$ using strain and the initial channel geometry.
 
 The accumulated angle $\theta$ along the neutral axis at this simulation iteration
+$$
+\theta=\sum_{i=1}^J \arccos\left(\frac{-\hat{w}_i^2+\hat{h}_{i-1}^2+\bar{w}^2+\hat{h}_i^2}{2\hat{h}_i\sqrt{\hat{h}_{i-1}^2+\bar{w}^2}}\right)-\arctan\left(\frac{\bar{w}}{\hat{h}_{i-1}}\right)
+$$
 
-![eqn12](eqn12.png)
 
 #### Conditions for constant curvature
 
@@ -154,3 +156,49 @@ Compare **bending angle** $\theta$ at each incremental fill level.
 - Not directly establish the validity of the PCC-based model's ability to describe the backbone's continuous deformation
 - Physical limitations. (maximum achievable bend angle of a segment)
 - Force output limitation.(When the rubber is subject to high rates of strain, the material exhibits increased stiffness and more effectively transfers input fluid energy into actuator tip force. Then, when the load is constant, the elastomer exhibits a decrease in stiffness and accordingly the actuator’s channel expands under the fluid energy lessening the actuator’s tip force)
+
+### Manipulator fabrication
+
+Fabricate the arm through a casting process that uses **pourable silicone rubber** and **3D printed molds**.
+
+Fabrication process:
+
+![13](13.png)
+
+The mold consists of four parts:
+
+1. two-part outer shell (orange)
+2. interior piece (blue)
+3. metal rods (grey)
+4. removable sleeve (fuchsia)
+
+> All inlet pieces are cut to length and cleaned with **rubbing alcohol** to ensure good bond between their surface and the silicone rubber
+>
+>
+{:.prompt-tip}
+
+## Power
+
+- Pressurized fluids (air because of its low viscosity)
+
+- Challenges:
+
+	1. need to supply each actuator with a continuous source of fluid energy for prolonged operation
+	2. need the ability to continuously adjust input energy for smooth curvature control
+
+- Fluidic drive cylinders
+
+![15](15.png)
+
+## Processing and control
+
+![alg2](alg2.png)
+
+1. `generateTraj()` generates a realizable curvature velocity trajectory $\dot{\kappa}(t)$ from $\kappa_0$ to $\kappa_f$. The velocity trajectory is trapezoidal.
+2. `driveSegments()` advances the arm segments along the aforementioned trajectory under closed-loop control.
+   1. New measurement of segment endpoints in reference to a base frame.
+   2. Transform into the sagittal plane specified by the rotation $\gamma$.
+   3. Use the endpoints to determine the measured curvature configuration representation $\kappa_\mathrm{meas}$. (`singleSegInvKin()`)
+   4. Compute a reference configuration $\kappa_\mathrm{target}$.
+   5. Input the computed error $\kappa_\mathrm{target}-\kappa_\mathrm{meas}$ to low level cascaded PI-PID controllers.
+
