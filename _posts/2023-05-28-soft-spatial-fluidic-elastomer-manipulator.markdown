@@ -9,6 +9,13 @@ img_path: /assets/230528/
 
 This is a note on the article *Design, kinematics, and control of a soft spatial fluidic elastomer manipulator*. This paper presents a robotic manipulation system capable of autonomously positioning a multi-segment soft fluidic elastomer robot in three dimensions.
 
+- A new spatial manipulator **morphology** that is modular in design and well suited for automation.
+- Multi-step **casting process** to build manipulators 3D.
+- A static model to understand how a single segment deforms.
+- Model of the multi-segment **kinematics** of the soft manipulator
+- **Power**: high capacity fluidic drive cylinders.
+- A **real-time closed-loop control algorithm** that generates realizable curvature trajectories, measures the arms current state using localized segment endpoints, and leverages a cascaded control strategy.
+
 ## Introduction
 
 Several advantages of the fluidic elastomer manipulator's continuum kinematics and soft material composition:
@@ -202,3 +209,52 @@ The mold consists of four parts:
    4. Compute a reference configuration $\kappa_\mathrm{target}$.
    5. Input the computed error $\kappa_\mathrm{target}-\kappa_\mathrm{meas}$ to low level cascaded PI-PID controllers.
 
+## Capabilities
+
+### Confined environment
+
+The **minimum confining space** for a continuum manipulator segment can be significantly **smaller** than a rigid manipulator link in environments whose boundaries can be parameterized by curved cylinders or tubes.
+
+### Shape fitting
+
+In an environment where a collision-free path is parameterized by a curved shape, a continuum manipulator can generally fit the curvature of the path better than a rigid link manipulator with discrete joints.
+
+Scenarios that cause an error between the continuum robot's curvature and the path's curvature:
+
+![22](22.png)
+
+#### Shape fitting algorithm
+
+Objective: to incrementally advance a soft continuum manipulator along a curved path.
+
+![alg3](alg3.png)
+
+For each segment on the path, two points along the segment’s neutral axis, the mid and endpoint, are fit to the path by choosing the segment’s curvature $\kappa$ to **minimize the Euclidean norm** between the two points and their **projection** onto the path.
+
+Forward kinematics procedure `forwardKin()`: recursively determining a point on the arm located a distance $s$ on segment $i$ given curvature and length.
+
+![alg4](alg4.png)
+
+### Positioning
+
+Inverse kinematics problem: a constrained nonlinear optimization
+
+1. Calculate $\gamma$ as well as find a locally-optimal reference configuration $\kappa^*$ that position the arm's end-effector at a goal point within a statically reachable envelope.
+2. Use the procedures in Algorithm 2 to plan and execute a curvature trajectory $\dot{\kappa}(t)$.
+
+![alg5](alg5.png)
+
+#### Positioning algorithm
+
+`moveToObject()`
+
+1. Localize an object's center in $\mathbb{R}^3$ using the external camera system (`localizeObject()`)
+2. Translate into a predetermined offset
+
+`moveToPoint()`: strategy for moving the arm
+
+1. Rotate the arm into a sagittal plane defined by $\gamma$
+2. Iterative search for manipulator configuration
+3. `singleSegInvKin()` uniquely fits a PCC model to the data
+
+`inverseKin()`: determine the trajectory's end configuration $\kappa_f$.
