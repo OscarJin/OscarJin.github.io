@@ -3,7 +3,7 @@ title:  Wonderland Lake and Hills Hiking
 date:   2023-07-03 16:19:00 -0600
 categories: [Gallery, Boulder]
 tags: [photography, landscape, mountains, lake, hiking]
-img_path: /assets/230520/
+img_path: /assets/230703/
 ---
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
