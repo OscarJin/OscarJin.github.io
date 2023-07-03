@@ -55,9 +55,7 @@ _Drive Winding in the Valley (Shot of Nikon Z7II)_
 ![valley-pano](valley-pano.png)
 _Panorama of the Valley (Shot of Nikon Z7II)_
 
-Finally, the route went back to the lakeside. Since I had to stop for photography and chocolate on the way, it took me more than three hours to finish the trail. Not a challenging route, wasn't it?
-
-The trail has left a deep impression on me so in the future I will explore more other trails in Boulder during my stay here.
+Finally, the route went back to the lakeside. Since I had to stop for photography and chocolate on the way, it took me more than three hours to finish the trail. Not a challenging route, wasn't it? The trail has left a deep impression on me, so in the future I will explore more other trails in Boulder during my stay here.
 
 Besides, I also took some photos with Kodak 5294 film, see the post about them after film development when I return to China.
 
