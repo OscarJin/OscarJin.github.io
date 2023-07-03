@@ -35,7 +35,7 @@ _Wonderland Lake Trailhead_
 The route began by passing by Wonderland Lake, which is a great spot to watch birds and the reflection of hills in the lake.
 
 ![lake-pano](lake_pano.png)
-_Panorama of the Hills and Reflections in the Lake (Shot of Nikon Z7II)_
+_Panorama of the Hills and Reflections in the Lake (Shot on Nikon Z7II)_
 
 Then the trail took me through open grassland and pine woodlands at the foot of the hill to the Old Kiln trail.
 
@@ -50,10 +50,10 @@ From Old Kiln, I started to climb over the hill. The view is even more beautiful
 ![valley-1](valley-1.png)
 
 ![valley-2](valley-2.png)
-_Drive Winding in the Valley (Shot of Nikon Z7II)_
+_Drive Winding in the Valley (Shot on Nikon Z7II)_
 
 ![valley-pano](valley_pano.png)
-_Panorama of the Valley (Shot of Nikon Z7II)_
+_Panorama of the Valley (Shot on Nikon Z7II)_
 
 Finally, the route went back to the lakeside. Since I had to stop for photography and chocolate on the way, it took me more than three hours to finish the trail. Not a challenging route, wasn't it? The trail has left a deep impression on me, so in the future I will explore more other trails in Boulder during my stay here.
 
