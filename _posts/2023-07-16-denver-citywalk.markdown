@@ -1,6 +1,6 @@
 ---
 title:  One-Day City Walk in Denver
-date:   2023-07-11 13:44:00 -0600
+date:   2023-07-16 13:44:00 -0600
 categories: [Gallery, Colorado]
 tags: [photography, landscape, city]
 img_path: /assets/230716/
