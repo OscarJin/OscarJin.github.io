@@ -1,7 +1,7 @@
 ---
 title:  Mount Sanitas Hiking
 date:   2023-07-11 14:53:00 -0600
-categories: [Gallery, Boulder]
+categories: [Gallery, Colorado]
 tags: [photography, landscape, mountains, hiking]
 img_path: /assets/230711/
 ---
