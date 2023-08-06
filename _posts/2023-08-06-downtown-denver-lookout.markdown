@@ -33,6 +33,7 @@ In the video, I documented the process of downtown Denver changing from the gold
   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/Adq4FoUnhac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
 </div>
 
+<br>
 For watchers in China, you can watch the video on Bilibili:
 
 <div class="aspect-ratio">
