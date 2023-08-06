@@ -31,7 +31,7 @@ Now please enjoy the video.
   <center><iframe src="//player.bilibili.com/player.html?bvid=BV1Ru411x7vn&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></center>
 </div>
 
-
+<br>
 The video is shot on DJI's latest Mini 3 Pro, so I will also write a brief review here. First of all, compared to Air 2S, I did not realize any other benefits of this drone except for its light weight and the fact that it is a new model. It is not so wind-resistant -- the sea wind in the Nan'ao Island has already made me very scared each time I flew it, and there were several times I almost could not get it back, needless to say if I used it for aerial photography in that kind of wind in western China. Of course, all above is based on my using experience, please see professional reviews to learn more about the drone, thanks!
 
 Of all the locations in the video, I would strongly recommend Puning. 
