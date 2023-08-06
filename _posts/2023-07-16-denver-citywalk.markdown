@@ -47,7 +47,7 @@ _Big Blue Bear_
 
 ## Downtown Denver Lookout
 
-This is a very classic photographic spot on Zuni street from where you can see the entire city's skyline, the bridge, and the surrounding highway. It is one of my favorites spots that I will revisit in the near future.
+This is a very classic photographic spot on Zuni Street from where you can see the entire city's skyline, the bridge, and the surrounding highway. It is one of my favorites spots that I will revisit in the near future.
 
 ![lookout](lookout.jpg)
 _Denver Skyline_
