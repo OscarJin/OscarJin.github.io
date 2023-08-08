@@ -26,6 +26,12 @@ Some footage shot in Chaoshan during the Labor Day, edited with the classic BGM 
 
 Now please enjoy the video.
 
+<div class="aspect-ratio">
+  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/gAXADYC56h8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+</div>
+
+<br>
+For watechers in China, you can also watch it on Bilibili:
 
 <div class="aspect-ratio">
   <center><iframe src="//player.bilibili.com/player.html?bvid=BV1Ru411x7vn&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></center>
