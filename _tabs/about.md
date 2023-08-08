@@ -14,6 +14,7 @@ Oscar Jin is an undergraduate from Tsinghua University, majoring in **Mechanical
 He is now interested in:
 
 - [Reinforcement Learning](https://oscarjin.github.io/categories/rl/)
+- [Design, Fabrication, Simulation and Control of Soft Robots](https://oscarjin.github.io/categories/soft-robots/)
 
 Besides, Oscar is fond of **landscape photography** and is the contract photographer of Visual China and Getty Images. He will publish a selection of his works in the [Gallery](https://oscarjin.github.io/categories/gallery/) on this website.
 
