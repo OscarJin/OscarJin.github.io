@@ -45,12 +45,27 @@ Downtown at the convention center you’ll spot a massive big blue bear peeking 
 ![bear](bear.jpg)
 _Big Blue Bear_
 
+## The International Church of Cannabis
+
+The International Church of Cannabis contains a trippy interior that is sure to brighten up your Instagram feed. Ticket price is $20 for students, including a splendid light show and free visit of the chapel.
+
+![church](church.jpg)
+_The International Church of Cannabis_
+
 ## Downtown Denver Lookout
 
 This is a very classic photographic spot on Zuni Street from where you can see the entire city's skyline, the bridge, and the surrounding highway. It is one of my favorites spots that I will revisit in the near future.
 
 ![lookout](lookout.jpg)
 _Denver Skyline_
+
+## City Park Pavilion
+
+![pavilion](pavilion.jpg)
+
+The City Park Pavilion graces the vicinity of the Denver Museum of Nature & Science, nestled beside the expansive City Park, which boasts a serene lake that bridges the gap between these two landmarks. Stand at the museum's vantage point, and you are treated to a picturesque panorama that encompasses not only the elegant pavilion but also the majestic downtown skyline, with the distant mountain peaks painting a breathtaking backdrop.
+
+![pavilion-lake](pavilion-lake.jpg)
 
 ## Other Street Views
 
