@@ -20,18 +20,22 @@ PCC Assumption: assume the state of an arm segment can be represented by a signe
 ## Forward Kinematics
 
 The orientation at any point $s\in[0,~L_i]$ along the arc representing segment $i$ within a chain of $n$ segments composing the arm can be expressed as:
+
 $$
 \theta_i(s) = k_i s+\theta_i(0)
 $$
+
 Assume $\theta_i(0) = \theta_{i-1}(L_{i-1})$ (because segments are serially connected and continuous)
 
 Position of any point along the arm
+
 $$
 \begin{align}
 x_i(s) &= x_{i-1}(L_{i-1})+\int_0^s \cos[\theta_i(s')]ds'\\
 y_i(s) &= x_{i-1}(L_{i-1})+\int_0^s \sin[\theta_i(s')]ds'\\
 \end{align}
 $$
+
 ![](alg2.png)
 
 ## Inverse Kinematics Algorithm
@@ -41,9 +45,11 @@ $$
 Each iteration, the algorithm calculates the incremental curvature updates $\Delta k$. Upon completion, return the curvatures required to attain the desired arm pose at that control time step.
 
 **Approach:** Iterative Jacobian transpose approach
+
 $$
 J=\frac{\partial\vec{w}\left(\vec{L},~\vec{k}, \theta_0(0)\right)}{\partial\vec{k}}
 $$
+
 ![](alg3.png)
 
 ## Main Control Algorithm
