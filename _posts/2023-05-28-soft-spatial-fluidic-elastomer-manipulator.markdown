@@ -1,5 +1,5 @@
 ---
-title: Design, kinematics, and control of a soft spatial fluidic elastomer manipulator
+title: Review -- Design, kinematics, and control of a soft spatial fluidic elastomer manipulator
 date:   2023-05-28 15:28:00 +0800
 categories: [Research, Soft Robots]
 tags: [notes, soft-actuator, paper]
