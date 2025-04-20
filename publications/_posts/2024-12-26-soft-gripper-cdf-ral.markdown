@@ -1,8 +1,8 @@
 ---
 title:  "Computational Design of Customized Vacuum-Driven Soft Grippers"
 date:   2024-12-26 10:00:00 +00:00
-image: /publications/images/2024-12-16/fig1.jpg
-image_onhover: /publications/images/2024-12-26/single-objects-grasping-all.jpg
+image: /publications/images/2024-12-26/241226-project.jpg 
+image_onhover: /publications/images/2024-12-26/241226-project-hover.jpg
 author: "Jiayi Jin"
 authors: "<strong>Jiayi Jin</strong>, Siyuan Feng, Shuguang Li"
 venue: "IEEE Robotics and Automation Letters"
