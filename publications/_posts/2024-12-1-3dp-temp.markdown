@@ -1,0 +1,20 @@
+---
+title:  "Data-driven inpainting for full-part temperature monitoring in additive manufacturing"
+date:   2024-12-1 10:00:00 +00:00
+image: /publications/images/241201-project.jpg
+image_onhover: /publications/images/241201-project.jpg
+author: "Jiayi Jin"
+authors: "Jiangce Chen, Mikhail Khrenov, <strong>Jiayi Jin</strong>, Sneha Prabha Narra, Christopher McComb"
+venue: "Journal of Manufacturing Systems"
+bib: |
+  @article{chen2024data,
+  title={Data-driven inpainting for full-part temperature monitoring in additive manufacturing},
+  author={Chen, Jiangce and Khrenov, Mikhail and Jin, Jiayi and Narra, Sneha Prabha and McComb, Christopher},
+  journal={Journal of Manufacturing Systems},
+  volume={77},
+  pages={558--575},
+  year={2024},
+  publisher={Elsevier}
+  }
+---
+Understanding the temperature history over a part during additive manufacturing (AM) is important for optimizing the process and ensuring product quality, as temperature impacts melt pool geometry, defect formation, and microstructure evolution. While in-process temperature monitoring holds promise for evaluating the part quality, existing thermal sensors used in AM provide only partial measurements of the temperature distribution over the part. In this work, we introduce an innovative approach for reconstructing the complete temperature profile using partial data. We formulate this challenge as an inpainting problem, a canonical task in machine learning which entails recovering missing information across a spatial domain. We present a data-driven model based on graph convolutional neural networks. To train the inpainting model, we employ a finite element simulation to generate a diverse dataset of temperature histories for various part geometries. Cross-validation indicates that the inpainting model accurately reconstructs the spatial distribution of part temperature with strong generalizability across various geometries. Further application to experimental data using infrared camera measurements shows that the model accuracy could be improved by augmenting the training data with simulation data that shares process parameters and geometry with the experimental part. By presenting a solution to the temperature inpainting problem, our approach not only improves the assessment of part quality using partial measurements but also paves the way for the creation of a temperature digital twin of the part using thermal sensors.
