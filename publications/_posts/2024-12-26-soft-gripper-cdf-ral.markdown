@@ -14,5 +14,7 @@ bib: |
   year={2024},
   publisher={IEEE}
   }
+links:
+  code: https://github.com/OscarJin/Gripper-Computational-Design
 ---
 Soft grippers are increasingly favored due to their passive compliance, lack of need for precise force control, and high adaptability to various object shapes. Unlike previous soft grippers that are mostly universal, we propose a framework for the computational design and rapid fabrication of customized soft grippers using a specific class of vacuum-driven pneumatic actuators. The algorithm can automatically generate a 3D-printable model of the optimized gripper design, and then the gripper can be rapidly fabricated at a low cost. Grasping experiments demonstrate that this framework can customize grippers for various daily objects with different geometries. The results also show the extensional abilities of customizing a gripper for multiple or heavy objects. This framework enables the rapid design and fabrication of grippers optimized for specific tasks while maintaining versatility for handling various objects.
