@@ -15,5 +15,7 @@ bib: |
   year={2026},
   organization={IEEE}
   }
+links:
+  video: https://www.youtube.com/watch?v=T6dqFutj08s
 ---
 Flying fish have often served as an inspiration for engineering designs due to their remarkable ability for cross-domain locomotion between water and air. Previous observations and simulations suggest that taxiing behavior before takeoff is indispensable, yet the mechanics of this transition remain unclear. In this work, we present the design and dynamic modeling of a robotic flying fish to investigate swimming and taxiing locomotion, with a particular focus on tail pitching. We develop a bio-inspired prototype with an active tail-pitching structure and a high-power-density tail-beating propulsion system. We further formulate a cross-domain dynamic model that couples hydrodynamic and aerodynamic forces during taxiing. Simulations show that pitching the tail downward increases peak height and enables the robot to leave the water at a more aerodynamically favorable angle of attack. Experiments with the robotic prototype validate these trends and show that downward tail pitching increases upward force and body elevation with only minor loss of forward speed. These results provide insight into the role of tail pitching in flying fish taxiing and takeoff preparation.
