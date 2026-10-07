@@ -16,7 +16,7 @@ bib: |
   pages={1641--1648},
   year={2025},
   publisher={IEEE},
-  doi={10.1109/LRA.2024.3523203}}
+  doi={10.1109/LRA.2024.3523203}
   }
 links:
   code: https://github.com/OscarJin/Gripper-Computational-Design
