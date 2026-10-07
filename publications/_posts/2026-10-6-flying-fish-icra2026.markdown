@@ -13,7 +13,8 @@ bib: |
   booktitle={2026 IEEE International Conference on Robotics and Automation (ICRA)},
   pages={9591--9598},
   year={2026},
-  organization={IEEE}
+  organization={IEEE},
+  doi={10.1109/ICRA57385.2026.11696809}}
   }
 links:
   video: https://www.youtube.com/watch?v=T6dqFutj08s

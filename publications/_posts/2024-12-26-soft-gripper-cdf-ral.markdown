@@ -8,11 +8,15 @@ authors: "<strong>Jiayi Jin</strong>, Siyuan Feng, Shuguang Li"
 venue: "IEEE Robotics and Automation Letters"
 bib: |
   @article{jin2024computational,
-  title={Computational Design of Customized Vacuum-Driven Soft Grippers},
+  title={Computational design of customized vacuum-driven soft grippers},
   author={Jin, Jiayi and Feng, Siyuan and Li, Shuguang},
   journal={IEEE Robotics and Automation Letters},
-  year={2024},
-  publisher={IEEE}
+  volume={10},
+  number={2},
+  pages={1641--1648},
+  year={2025},
+  publisher={IEEE},
+  doi={10.1109/LRA.2024.3523203}}
   }
 links:
   code: https://github.com/OscarJin/Gripper-Computational-Design
