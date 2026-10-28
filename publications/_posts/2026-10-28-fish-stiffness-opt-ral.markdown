@@ -1,8 +1,8 @@
 ---
 title:  "Dynamics Modeling and Swimming Optimization of Robotic Fish with Various Local Body Stiffness"
 date:   2026-10-28 10:00:00 +00:00
-image: /publications/images/261028-project.jpg 
-image_onhover: /publications/images/261028-project-hover.jpg
+image: /publications/images/261028-project.png 
+image_onhover: /publications/images/261028-project-hover.png
 author: "Jiayi Jin"
 authors: "<strong>Jiayi Jin</strong>, Li-Ming Chao, Liang Li, Wei Wang"
 venue: "IEEE Robotics and Automation Letters"
