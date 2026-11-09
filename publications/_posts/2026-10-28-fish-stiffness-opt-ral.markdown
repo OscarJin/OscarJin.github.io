@@ -10,11 +10,11 @@ bib: |
   @article{jin2026dynamics,
   author={Jin, Jiayi and Chao, Li-Ming and Li, Liang and Wang, Wei},
   journal={IEEE Robotics and Automation Letters}, 
-  title={Dynamics Modeling and Swimming Optimization of Robotic Fish with Various Local Body Stiffness}, 
+  title={Dynamics Modeling and Swimming Optimization of Robotic Fish With Various Local Body Stiffness}, 
   year={2026},
-  volume={},
-  number={},
-  pages={1-8},
+  volume={11},
+  number={12},
+  pages={14364-14371},
   doi={10.1109/LRA.2026.3746908}
   }
 links:
